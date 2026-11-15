@@ -25,90 +25,68 @@
 @media(max-width:370px){.product-photo{height:145px}.price-card ul,.price-card.full ul{grid-template-columns:1fr}.hero-image{height:340px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 
-/* LUKI SIGNATURE LUXURY ART DIRECTION */
-:root{--paper:#171914;--white:#f2eee5;--ink:#eee9df;--muted:#aaa89d;--line:#45463d;--forest:#11140f;--olive:#b59a70;--copper:#c6a879}
-body{background:#171914;color:#eee9df}
-.topline{background:#0e100d;color:#d8d0c0;letter-spacing:2.6px}
-.header{background:rgba(23,25,20,.94);border-bottom:1px solid rgba(198,168,121,.2)}
-.brand{color:#f1ebdf}.brand small{color:#a9a394}
-.links{color:#c8c2b5}.links a:hover{color:#d3b98c}
-.nav-note{color:#aaa496}.nav-cta,.button{background:#b79a6d;border-color:#b79a6d;color:#171914}
-.nav-cta:hover,.button:hover{background:#d0b78d;border-color:#d0b78d;color:#171914}
-.menu{color:#f1ebdf}
-.hero{padding-top:0;padding-bottom:90px}
-.hero-layout{grid-template-columns:.78fr 1.22fr;min-height:690px}
-.hero-copy{padding:72px 9% 60px 0}
-.hero h1{font-size:clamp(55px,6.3vw,91px);letter-spacing:-5px;color:#f2eee5}
-.hero h1 em{color:#c7a879}
-.hero-copy>p{color:#b8b5aa}
-.hero-caption{color:#9d9b90}
-.hero-kicker:before{background:#c7a879}
-.hero-image{min-height:650px}
-.image-stamp{background:#b79a6d;color:#171914}
-.image-stamp span{color:#38392f}
-.intro{padding-top:8px}
-.intro h2,.section-title{color:#f0ece3}
-.intro p,.section-head>p,.service-top>p{color:#aaa89d}
-.projects{background:#20231d}
-.projects .section-title{color:#f0ece3}
-.projects .section-head>p{color:#aaa89d}
-.project-large,.project-small{background:#303329}
-.project-overlay{background:linear-gradient(transparent,rgba(8,10,8,.88))}
-.project-overlay span{color:#d7bd94}
-.services{background:#eeeae0;color:#24261f}
-.services .section-title{color:#252820}
-.services .eyebrow{color:#92744e}
-.services .service-top>p{color:#686b61}
-.service-grid{border-color:#c9c4b8}
-.service+.service{border-color:#c9c4b8}
-.service .num{color:#92744e}
-.service p{color:#6e7067}
-.pricing{background:#171914;color:#f1ede4}
-.pricing .section-title{color:#f1ede4}
-.pricing .price-intro,.pricing .section-head>p,.pricing .price-note{color:#aaa89d}
-.price-card{background:#eeeadf;border-color:#d8d0c1;color:#252820}
-.price-card h3{color:#252820}
-.price{color:#6b684d}
-.price-card h4{color:#96764e}
-.price-card li{color:#66675e}
-.price-card li:before{background:#ad8b5b}
-.catalog{background:#e7e3d9;color:#24261f}
-.catalog .section-title{color:#24261f}
-.catalog .section-head>p{color:#696b62}
-.searchbox,.catalog-tools select{background:#f8f6f0;border-color:#d0cabc}
-.product-card{background:#f8f6f0}
-.product-meta h3{color:#252820}
-.product-meta p,.product-foot{color:#707168}
-.product-price{color:#6f7053}
-.about{background:#171914;color:#f0ece3}
-.about-copy h2{color:#f0ece3}
-.about-copy>p{color:#aaa89d}
-.about-detail{border-color:#45463d}
-.about-detail strong{color:#f0ece3}
-.about-detail small{color:#aaa89d}
-.about-detail .material-symbols-outlined{color:#c6a879}
-.about-image:after{border-color:#b79a6d}
-.contact{background:#b79a6d;color:#171914}
-.contact .eyebrow{color:#514532}
-.contact h2{color:#171914}
-.contact p{color:#39392f}
-.contact .button{background:#171914;border-color:#171914;color:#f2eee5}
-.contact .button:hover{background:#30372c;border-color:#30372c}
-.footer{background:#0e100d;color:#f1ede4}
-.footer p,.footer-bottom{color:#a5a397}
-.footer-links{color:#d8d1c3}
-.footer-bottom{border-color:#3b3c34}
+/* LUKI ORIGINAL WARM NATURAL PALETTE */
+:root{--paper:#eeeee5;--white:#f9f8f3;--ink:#222720;--muted:#74786e;--line:#d7d7cc;--forest:#303a30;--olive:#626b50;--copper:#ad805c}
+body{background:var(--paper);color:var(--ink)}
+.topline{background:var(--forest);color:#e8e8df}
+.header{background:rgba(238,238,229,.94);border-bottom:1px solid rgba(48,58,48,.12)}
+.brand{color:var(--ink)}.brand small{color:var(--muted)}
+.links{color:#62665d}.links a:hover{color:var(--copper)}
+.nav-note{color:var(--muted)}.nav-cta,.button{background:var(--forest);border-color:var(--forest);color:white}
+.nav-cta:hover,.button:hover{background:var(--olive);border-color:var(--olive);color:white}
+.menu{color:var(--ink)}
+.hero h1{color:var(--ink)}.hero h1 em{color:var(--olive)}
+.hero-copy>p,.hero-caption{color:var(--muted)}
+.hero-kicker:before{background:var(--copper)}
+.hero-visual{background:linear-gradient(145deg,#626b50 0%,#303a30 58%,#414a3b 100%);color:#f9f8f3;border:1px solid rgba(173,128,92,.35)}
+.hero-visual:before,.hero-visual:after{border-color:rgba(238,238,229,.22)}
+.hero-visual-top,.hero-visual-bottom{color:#e0e2d8}
+.hero-monogram{color:#f9f8f3}.hero-monogram span{color:#d4aa82}
+.intro h2,.section-title{color:var(--ink)}
+.intro p,.section-head>p,.service-top>p{color:var(--muted)}
+.projects{background:#e4e2d9}
+.projects .section-title{color:var(--ink)}.projects .section-head>p{color:var(--muted)}
+.project-large,.project-small{background:#c9c6ba}
+.project-overlay{background:linear-gradient(transparent,rgba(20,25,20,.75))}
+.project-overlay span{color:#e0c8ad}
+.services{background:transparent;color:var(--ink)}
+.services .section-title{color:var(--ink)}.services .eyebrow{color:var(--copper)}
+.services .service-top>p{color:var(--muted)}
+.service-grid,.service+.service{border-color:var(--line)}
+.service .num{color:var(--copper)}.service p{color:var(--muted)}
+.pricing{background:var(--forest);color:#f5f3ec}
+.pricing .section-title{color:#f5f3ec}
+.pricing .price-intro,.pricing .section-head>p,.pricing .price-note{color:#c1c6b9}
+.price-card{background:#f6f5ef;border-color:#d8d0c1;color:var(--ink)}
+.price-card h3{color:var(--ink)}.price{color:var(--olive)}
+.price-card h4{color:var(--copper)}.price-card li{color:#666a60}
+.price-card li:before{background:var(--copper)}
+.catalog{background:var(--white);color:var(--ink)}
+.catalog .section-title{color:var(--ink)}.catalog .section-head>p{color:var(--muted)}
+.searchbox,.catalog-tools select{background:white;border-color:var(--line)}
+.product-card{background:#eeece5}
+.product-meta h3{color:var(--ink)}.product-meta p,.product-foot{color:#707168}
+.product-price{color:var(--olive)}
+.about{background:var(--paper);color:var(--ink)}
+.about-copy h2{color:var(--ink)}.about-copy>p{color:var(--muted)}
+.about-detail{border-color:var(--line)}.about-detail strong{color:var(--ink)}
+.about-detail small{color:var(--muted)}.about-detail .material-symbols-outlined{color:var(--copper)}
+.about-mark{background:linear-gradient(145deg,#626b50,#303a30);border:1px solid rgba(173,128,92,.35)}
+.about-mark:before{border-color:rgba(238,238,229,.22)}
+.about-mark-kicker,.about-mark-caption{color:#e0e2d8}
+.about-mark strong{color:#f9f8f3}.about-mark strong span{color:#d4aa82}
+.about-image:after{border-color:var(--copper)}
+.contact{background:#dcd9ce;color:var(--ink)}
+.contact .eyebrow{color:#92744e}.contact h2{color:var(--ink)}
+.contact p{color:var(--muted)}
+.contact .button{background:var(--forest);border-color:var(--forest);color:white}
+.contact .button:hover{background:var(--olive);border-color:var(--olive)}
+.footer{background:#222720;color:#f0eee7}
+.footer p,.footer-bottom{color:#aeb3a8}
+.footer-links{color:#d8dbd2}.footer-bottom{border-color:#41483e}
 @media(max-width:650px){
- .hero{padding-top:0;padding-bottom:58px}
- .hero-layout{flex-direction:column-reverse}
- .hero-image{height:390px;min-height:0}
- .hero-copy{padding:29px 0 0}
- .hero h1{font-size:clamp(48px,13vw,65px);letter-spacing:-3.3px}
- .links{background:#171914;border-color:#45463d;color:#e7e0d3}
- .project-stack{grid-template-columns:1fr 1fr}
- .services{padding:66px 0}
- .services .service-grid{border-color:#c9c4b8}
- .price-card{background:#eeeadf}
+ .links{background:var(--paper);border-color:var(--line);color:var(--ink)}
+ .hero-visual{background:linear-gradient(145deg,#626b50 0%,#303a30 58%,#414a3b 100%)}
  .contact{padding:54px 0}
 }
 
