@@ -50,12 +50,9 @@
 <a class="category-card" href="#pilihan"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1000&q=85" alt="Inspirasi furnitur kamar tidur"><div class="category-info"><div><small>02 / REST & RESET</small><h3>Bedroom</h3></div><span class="round-arrow material-symbols-outlined">north_east</span></div></a>
 <a class="category-card" href="#pilihan"><img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1000&q=85" alt="Inspirasi ruang makan"><div class="category-info"><div><small>03 / GATHER & SHARE</small><h3>Dining Room</h3></div><span class="round-arrow material-symbols-outlined">north_east</span></div></a>
 </div></div></section>
-<section class="section featured" id="pilihan"><div class="container"><div class="section-heading"><div><div class="eyebrow">Curated inspiration</div><h2>Pieces to love, spaces to live.</h2></div><p>Beberapa inspirasi pilihan untuk membantu Anda membayangkan ruang yang terasa lebih nyaman. Katalog produk akan hadir di sini.</p></div>
-<div class="product-grid">
-<article class="product-card"><div class="product-photo"><img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=85" alt="Inspirasi sofa untuk ruang keluarga"><span class="product-tag">Living</span></div><div class="product-meta"><h3>The Everyday Sofa</h3><p>Inspirasi tempat berkumpul dan melepas penat.</p></div><div class="product-foot"><span>Living room edit</span><a href="#kontak">Tanyakan <span class="material-symbols-outlined">arrow_forward</span></a></div></article>
-<article class="product-card"><div class="product-photo"><img src="https://images.unsplash.com/photo-1499933374294-4584851497cc?auto=format&fit=crop&w=900&q=85" alt="Inspirasi meja kayu minimalis"><span class="product-tag">Workspace</span></div><div class="product-meta"><h3>Quiet Workspace</h3><p>Sudut kerja yang rapi, tenang, dan fungsional.</p></div><div class="product-foot"><span>Work & study edit</span><a href="#kontak">Tanyakan <span class="material-symbols-outlined">arrow_forward</span></a></div></article>
-<article class="product-card"><div class="product-photo"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=85" alt="Inspirasi tempat tidur bernuansa hangat"><span class="product-tag">Bedroom</span></div><div class="product-meta"><h3>Restful Bedroom</h3><p>Suasana istirahat dengan sentuhan natural.</p></div><div class="product-foot"><span>Bedroom edit</span><a href="#kontak">Tanyakan <span class="material-symbols-outlined">arrow_forward</span></a></div></article>
-</div></div></section>
+<section class="section featured" id="pilihan"><div class="container"><div class="section-heading"><div><div class="eyebrow">Luki Furniture collection</div><h2>Temukan furnitur pilihan.</h2></div><p>Jelajahi katalog produk Luki Furniture. Data produk akan diperbarui langsung dari database.</p></div>
+<div class="catalog-tools"><label class="catalog-search"><span class="material-symbols-outlined">search</span><input id="productSearch" type="search" placeholder="Cari nama produk..." aria-label="Cari produk"></label><select id="categoryFilter" aria-label="Filter kategori"><option value="">Semua kategori</option></select></div>
+<div class="product-grid" id="productGrid" aria-live="polite"><div class="catalog-state">Memuat katalog produk...</div></div></div></section>
 <section class="section" id="cerita"><div class="container"><div class="story">
 <div class="story-image"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=88" alt="Interior rumah modern dengan material natural"></div>
 <div class="story-copy"><div class="eyebrow">The Luki perspective</div><h2>A home should feel like yours.</h2><p>Luki Furniture percaya bahwa rumah bukan sekadar tempat, tetapi ruang untuk menjalani banyak cerita. Karena itu, pilihan furnitur seharusnya tidak hanya menarik secara visual, tetapi juga mendukung cara Anda hidup.</p>
@@ -65,11 +62,58 @@
 <section class="contact-section" id="kontak"><div class="container"><div class="contact-panel"><div class="contact-copy"><div class="eyebrow">Let's make it feel like home</div><h2>Start with your space.</h2><p>Punya ruang yang ingin ditata atau sedang mencari furnitur? Hubungi Luki Furniture untuk membicarakan kebutuhan Anda.</p></div><div class="contact-action"><a class="button" href="#koleksi">Lihat inspirasi <span class="material-symbols-outlined">north_east</span></a></div></div></div></section>
 </main>
 <footer class="footer"><div class="container"><div class="footer-top"><div class="footer-about"><a class="footer-brand" href="#">LUKI<small>FURNITURE & INTERIOR</small></a><p>Thoughtful furniture and interior inspiration for a more comfortable everyday living.</p></div><div class="footer-col"><strong>Explore</strong><a href="#koleksi">Koleksi</a><a href="#pilihan">Pilihan Kami</a><a href="#cerita">Tentang Kami</a></div><div class="footer-col"><strong>Get in touch</strong><a href="#kontak">Hubungi Kami</a><span>Informasi kontak segera hadir</span></div></div><div class="footer-bottom"><span>© <span id="year"></span> Luki Furniture. All rights reserved.</span><span>Designed for better living.</span></div></div></footer>
+<style>
+.catalog-tools{display:flex;gap:12px;margin:0 0 22px;flex-wrap:wrap}.catalog-search{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);padding:0 14px;min-height:48px;flex:1;min-width:210px}.catalog-search .material-symbols-outlined{color:var(--muted)}.catalog-search input{border:0;outline:0;background:transparent;width:100%;font:12px var(--sans);color:var(--ink)}.catalog-tools select{min-height:48px;padding:0 38px 0 14px;border:1px solid var(--line);background:#fff;color:var(--ink);font:12px var(--sans);min-width:170px}.catalog-state{grid-column:1/-1;padding:45px 20px;text-align:center;color:var(--muted);font-size:12px;background:rgba(255,255,255,.55)}.product-price{font-size:12px;color:var(--forest);font-weight:700;margin-top:10px}.product-foot button{border:0;background:none;color:var(--forest);font:700 10px var(--sans);display:flex;align-items:center;gap:5px;padding:0;cursor:pointer}
+@media(max-width:680px){.catalog-tools{display:grid;grid-template-columns:1fr}.catalog-tools select{width:100%}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 const menuToggle=document.getElementById('menuToggle');const navLinks=document.getElementById('navLinks');
 menuToggle.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.querySelector('span').textContent=open?'close':'menu';});
 navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{navLinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.querySelector('span').textContent='menu';}));
 document.getElementById('year').textContent=new Date().getFullYear();
+
+const SUPABASE_URL='https://qargnijwavdqcspwqmlu.supabase.co';
+const SUPABASE_KEY='sb_publishable_YGPdNyRX8n7ryQhh5a6EAQ_aWc-Ggeg';
+const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);
+const productGrid=document.getElementById('productGrid');
+const productSearch=document.getElementById('productSearch');
+const categoryFilter=document.getElementById('categoryFilter');
+let catalogProducts=[];
+const escapeHtml=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+const rupiah=value=>value==null?'Hubungi kami':new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(value);
+function renderProducts(){
+ const term=productSearch.value.trim().toLocaleLowerCase('id');
+ const category=categoryFilter.value;
+ const items=catalogProducts.filter(p=>(!category||p.category_id===category)&&(!term||p.name.toLocaleLowerCase('id').includes(term)||(p.short_description||'').toLocaleLowerCase('id').includes(term)));
+ if(!items.length){productGrid.innerHTML='<div class="catalog-state">Belum ada produk yang cocok. Silakan ubah pencarian atau pilihan kategori.</div>';return;}
+ productGrid.innerHTML=items.map(p=>{
+  const image=p.cover_image||'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=900&q=85';
+  const price=p.discount_price??p.price;
+  return '<article class="product-card"><div class="product-photo"><img loading="lazy" src="'+escapeHtml(image)+'" alt="'+escapeHtml(p.name)+'"><span class="product-tag">'+escapeHtml(p.categories?.name||'Furniture')+'</span></div><div class="product-meta"><h3>'+escapeHtml(p.name)+'</h3><p>'+escapeHtml(p.short_description||p.description||'Produk pilihan Luki Furniture.')+'</p><div class="product-price">'+rupiah(price)+'</div></div><div class="product-foot"><span>'+(p.material?escapeHtml(p.material):'Luki Furniture')+'</span><button type="button" data-product="'+escapeHtml(p.id)+'">Detail <span class="material-symbols-outlined">arrow_forward</span></button></div></article>';
+ }).join('');
+ productGrid.querySelectorAll('[data-product]').forEach(button=>button.addEventListener('click',()=>{
+  const p=catalogProducts.find(item=>item.id===button.dataset.product);
+  if(!p)return;
+  alert([p.name,p.description||p.short_description||'',p.material?'Material: '+p.material:'',p.dimensions?'Ukuran: '+p.dimensions:'','Harga: '+rupiah(p.discount_price??p.price)].filter(Boolean).join('\\n\\n'));
+ }));
+}
+async function loadCatalog(){
+ try{
+  const [productsResult,categoriesResult]=await Promise.all([
+   db.from('products').select('id,name,slug,short_description,description,price,discount_price,material,dimensions,category_id,cover_image,categories(name)').eq('is_active',true).order('created_at',{ascending:false}),
+   db.from('categories').select('id,name').eq('is_active',true).order('sort_order')
+  ]);
+  if(productsResult.error)throw productsResult.error;
+  if(categoriesResult.error)throw categoriesResult.error;
+  catalogProducts=productsResult.data||[];
+  categoryFilter.innerHTML='<option value="">Semua kategori</option>'+(categoriesResult.data||[]).map(c=>'<option value="'+escapeHtml(c.id)+'">'+escapeHtml(c.name)+'</option>').join('');
+  renderProducts();
+ }catch(error){productGrid.innerHTML='<div class="catalog-state">Katalog belum dapat dimuat. Silakan coba beberapa saat lagi.</div>';console.error('Luki catalog:',error);}
+}
+productSearch.addEventListener('input',renderProducts);
+categoryFilter.addEventListener('change',renderProducts);
+loadCatalog();
 </script>
 </body>
 </html>
