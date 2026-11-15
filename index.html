@@ -1,503 +1,51 @@
 <!doctype html>
 <html lang="id">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#eeece5">
-<meta name="description" content="Luki Furniture menyediakan kitchen set dan interior custom sesuai kebutuhan dan ukuran ruang.">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#eeeee5">
+<meta name="description" content="Luki Furniture — kitchen set dan interior custom sesuai kebutuhan ruang Anda.">
 <title>Luki Furniture — Kitchen Set & Interior Custom</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
 <style>
-:root{--paper:#eeece5;--white:#f9f8f3;--ink:#222720;--muted:#74786e;--line:#d7d7cc;--forest:#303a30;--olive:#626b50;--copper:#ad805c;--serif:'Manrope',sans-serif;--sans:'DM Sans',sans-serif}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{display:block;width:100%;height:100%;object-fit:cover}.wrap{width:min(1320px,calc(100% - 88px));margin:auto}.material-symbols-outlined{font-size:20px;vertical-align:middle;font-weight:300}.eyebrow{font-size:9px;letter-spacing:2.6px;text-transform:uppercase;font-weight:700;color:var(--copper)}.topline{height:32px;background:var(--forest);color:#e8e8df;display:flex;align-items:center;justify-content:center;font-size:9px;letter-spacing:2px;text-transform:uppercase}.header{height:82px;position:sticky;top:0;z-index:20;background:rgba(238,236,229,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(48,58,48,.12)}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{font:800 22px var(--serif);letter-spacing:4px;line-height:1}.brand small{display:block;font:600 8px var(--sans);letter-spacing:2.8px;color:var(--muted);margin-top:7px}.links{display:flex;gap:30px;font-size:11px;font-weight:600;color:#62665d}.links a{transition:color .2s}.links a:hover{color:var(--copper)}.nav-end{display:flex;align-items:center;gap:18px}.nav-note{font-size:10px;color:var(--muted)}.nav-cta,.button{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:15px 20px;background:var(--forest);color:white;font-size:10px;font-weight:700;letter-spacing:.3px;border:1px solid var(--forest);transition:.25s}.nav-cta:hover,.button:hover{background:var(--olive);border-color:var(--olive);transform:translateY(-2px)}.menu{display:none;background:none;border:0;color:var(--ink);padding:8px}
-.hero{padding:28px 0 84px}.hero-layout{display:grid;grid-template-columns:.82fr 1.18fr;min-height:640px;align-items:stretch}.hero-copy{padding:60px 7% 52px 0;display:flex;flex-direction:column;justify-content:center}.hero-kicker{display:flex;align-items:center;gap:12px}.hero-kicker:before{content:"";width:34px;height:1px;background:var(--copper)}.hero h1{font:600 clamp(52px,6vw,88px)/.99 var(--serif);letter-spacing:-4.5px;margin:26px 0 20px}.hero h1 em{font-style:normal;color:var(--olive)}.hero-copy>p{font-size:13px;line-height:2;color:var(--muted);max-width:390px;margin:0 0 30px}.hero-actions{display:flex;align-items:center;gap:22px}.text-link{font-size:10px;font-weight:700;border-bottom:1px solid var(--copper);padding-bottom:5px}.hero-caption{font-size:9px;letter-spacing:1.7px;color:var(--muted);margin-top:55px;text-transform:uppercase}.hero-image{position:relative;min-height:600px;background:#c9c6ba;overflow:hidden}.hero-image img{object-position:center 55%;transition:transform 1s}.hero-image:hover img{transform:scale(1.025)}.image-stamp{position:absolute;right:22px;bottom:22px;background:var(--paper);padding:17px 20px;min-width:150px}.image-stamp b{display:block;font:600 19px var(--serif)}.image-stamp span{display:block;font-size:8px;letter-spacing:1.5px;color:var(--muted);margin-top:4px}
-.intro{padding:0 0 100px;display:grid;grid-template-columns:1fr 1fr;gap:9%;align-items:end}.intro h2,.section-title{font:600 clamp(34px,4.2vw,58px)/1.12 var(--serif);letter-spacing:-2.5px;margin:15px 0 0}.intro p{font-size:12px;line-height:2.1;color:var(--muted);max-width:450px;margin:0 0 5px}
-.projects{background:#e4e2d9;padding:92px 0 100px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}.section-head>p{max-width:320px;color:var(--muted);font-size:11px;line-height:1.9;margin:0}.project-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:18px}.project-large{height:610px;position:relative;overflow:hidden;background:#c9c6ba}.project-stack{display:grid;grid-template-rows:1fr 1fr;gap:18px}.project-small{height:296px;position:relative;overflow:hidden;background:#c9c6ba}.project-grid img{transition:transform .8s}.project-grid article:hover img{transform:scale(1.035)}.project-overlay{position:absolute;inset:auto 0 0;padding:70px 25px 24px;color:white;background:linear-gradient(transparent,rgba(20,25,20,.75))}.project-overlay span{font-size:8px;letter-spacing:2px;text-transform:uppercase;color:#e0c8ad}.project-overlay h3{font:600 24px var(--serif);margin:8px 0 0}.project-small .project-overlay h3{font-size:19px}
-.services{padding:100px 0 92px}.service-top{display:flex;justify-content:space-between;align-items:end;gap:30px}.service-top>p{max-width:330px;color:var(--muted);font-size:11px;line-height:1.9}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);margin-top:42px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.service{padding:28px 28px 30px 0}.service+.service{padding-left:28px;border-left:1px solid var(--line)}.service .num{font-size:9px;letter-spacing:2px;color:var(--copper)}.service h3{font:600 20px var(--serif);margin:18px 0 9px}.service p{font-size:11px;line-height:1.9;color:var(--muted);margin:0}
-.pricing{background:var(--forest);color:#f5f3ec;padding:96px 0 100px}.pricing .eyebrow{color:#c9a989}.pricing .section-head>p,.pricing .price-intro{color:#c1c6b9}.pricing .section-title{max-width:650px}.price-intro{font-size:12px;line-height:1.9;max-width:600px;margin:12px 0 35px}.price-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.price-card{background:#f6f5ef;color:var(--ink);padding:25px 27px;border:1px solid rgba(255,255,255,.1)}.price-top{display:flex;justify-content:space-between;gap:15px;align-items:flex-start;padding-bottom:17px;border-bottom:1px solid var(--line)}.price-card h3{font:600 18px var(--serif);margin:0}.price{font-size:13px;font-weight:700;color:var(--olive);text-align:right;white-space:nowrap}.unit{display:block;font-size:9px;color:var(--muted);font-weight:500;margin-top:4px}.price-card h4{font-size:8px;letter-spacing:1.7px;text-transform:uppercase;color:var(--copper);margin:18px 0 9px}.price-card ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:7px 12px}.price-card li{font-size:10px;line-height:1.6;color:#666a60;padding-left:13px;position:relative}.price-card li:before{content:"";position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--copper)}.price-card.full{grid-column:1/-1}.price-card.full ul{grid-template-columns:repeat(3,1fr)}.price-note{font-size:10px;color:#c1c6b9;line-height:1.8;margin:20px 0 0}
-.catalog{padding:92px 0;background:var(--white)}.catalog-tools{display:flex;gap:10px;margin:28px 0 20px}.searchbox{display:flex;align-items:center;gap:10px;flex:1;min-height:46px;background:white;border:1px solid var(--line);padding:0 14px}.searchbox input{width:100%;border:0;outline:0;font:12px var(--sans);background:transparent}.catalog-tools select{min-width:180px;border:1px solid var(--line);background:white;padding:0 14px;font:12px var(--sans);color:var(--ink)}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.product-card{background:#eeece5;padding:9px}.product-photo{height:265px;background:#d9d6cd;overflow:hidden}.product-photo img{transition:transform .6s}.product-card:hover img{transform:scale(1.03)}.product-meta{padding:15px 9px 12px}.product-meta h3{font:600 17px var(--serif);margin:0 0 7px}.product-meta p{font-size:10px;color:var(--muted);line-height:1.8;margin:0}.product-price{font-size:11px;font-weight:700;color:var(--olive);margin-top:10px}.product-foot{border-top:1px solid var(--line);padding:12px 9px 4px;display:flex;justify-content:space-between;align-items:center;font-size:9px;color:var(--muted)}.product-foot button{border:0;background:none;color:var(--olive);font:700 10px var(--sans);cursor:pointer}.catalog-state{grid-column:1/-1;background:#eeece5;text-align:center;padding:42px 15px;font-size:11px;color:var(--muted)}
-.about{padding:100px 0}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:10%;align-items:center}.about-image{height:550px;position:relative;margin:0 16px 16px 0}.about-image:after{content:"";position:absolute;z-index:0;left:16px;right:-16px;top:16px;bottom:-16px;border:1px solid #c3a78e}.about-image img{position:relative;z-index:1}.about-copy h2{font:600 clamp(36px,4vw,54px)/1.1 var(--serif);letter-spacing:-2.6px;margin:16px 0 20px}.about-copy>p{font-size:12px;line-height:2.1;color:var(--muted);max-width:450px}.about-detail{border-top:1px solid var(--line);padding-top:19px;margin-top:26px;display:flex;gap:13px;align-items:center}.about-detail .material-symbols-outlined{font-size:27px;color:var(--copper)}.about-detail strong{display:block;font-size:11px}.about-detail small{display:block;font-size:10px;color:var(--muted);margin-top:4px}
-.contact{background:#dcd9ce;padding:72px 0}.contact-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}.contact h2{font:600 clamp(34px,4vw,52px)/1.1 var(--serif);letter-spacing:-2px;margin:13px 0}.contact p{font-size:11px;line-height:1.9;color:var(--muted);max-width:440px;margin:0}.contact .button{white-space:nowrap}
-.footer{background:#222720;color:#f0eee7;padding:42px 0 20px}.footer-top{display:flex;justify-content:space-between;gap:30px;padding-bottom:32px}.footer p{font-size:10px;line-height:1.9;color:#aeb3a8;max-width:310px}.footer-links{display:flex;gap:24px;align-items:center;font-size:10px;color:#d8dbd2}.footer-bottom{border-top:1px solid #41483e;padding-top:17px;display:flex;justify-content:space-between;font-size:9px;color:#aeb3a8}
-@media(max-width:900px){.wrap{width:calc(100% - 52px)}.links{gap:18px}.nav-note{display:none}.hero-layout{grid-template-columns:.9fr 1.1fr;min-height:560px}.hero-image{min-height:550px}.hero h1{font-size:66px}.project-large{height:520px}.project-small{height:251px}.about-grid{gap:7%}}
-@media(max-width:650px){.wrap{width:calc(100% - 36px)}.topline{height:29px;font-size:7px;letter-spacing:1.5px}.header{height:68px}.brand{font-size:19px}.links{display:none;position:absolute;top:68px;left:0;right:0;padding:23px 22px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;gap:21px}.links.open{display:flex}.nav-cta{display:none}.menu{display:block}.hero{padding:12px 0 60px}.hero-layout{display:flex;flex-direction:column-reverse;min-height:0}.hero-image{height:390px;min-height:0}.image-stamp{right:12px;bottom:12px;padding:12px 14px;min-width:125px}.image-stamp b{font-size:16px}.hero-copy{padding:30px 0 0}.hero h1{font-size:clamp(49px,13vw,66px);letter-spacing:-3.5px;margin:18px 0 14px}.hero-copy>p{font-size:11px;line-height:1.9;margin-bottom:22px}.hero-actions{gap:17px}.hero-caption{margin-top:25px;font-size:8px}.intro{grid-template-columns:1fr;gap:17px;padding-bottom:65px}.intro h2,.section-title{font-size:36px;letter-spacing:-1.8px}.intro p{font-size:11px}.projects{padding:64px 0}.section-head{display:block;margin-bottom:25px}.section-head>p{margin-top:13px}.project-grid{grid-template-columns:1fr;gap:12px}.project-large{height:420px}.project-stack{grid-template-columns:1fr 1fr;grid-template-rows:none;gap:12px}.project-small{height:225px}.project-overlay{padding:55px 13px 15px}.project-overlay h3{font-size:17px}.project-small .project-overlay h3{font-size:14px}.project-overlay span{font-size:7px}.services{padding:66px 0}.service-top{display:block}.service-top>p{margin-top:12px}.service-grid{grid-template-columns:1fr;margin-top:25px}.service,.service+.service{padding:21px 0;border-left:0;border-bottom:1px solid var(--line)}.service:last-child{border-bottom:0}.service h3{margin:10px 0 6px}.pricing{padding:67px 0}.price-grid{grid-template-columns:1fr;gap:10px}.price-card,.price-card.full{grid-column:auto;padding:21px 18px}.price-card h3{font-size:16px}.price-card ul,.price-card.full ul{grid-template-columns:1fr 1fr}.price-card li{font-size:9px}.price-top{gap:8px}.price{font-size:11px}.price-intro{font-size:11px}.catalog{padding:65px 0}.catalog-tools{display:grid;grid-template-columns:1fr}.catalog-tools select{height:46px}.product-grid{grid-template-columns:1fr 1fr;gap:9px}.product-photo{height:175px}.product-meta{padding:12px 6px}.product-meta h3{font-size:14px}.product-meta p{font-size:9px}.product-foot{padding:10px 6px}.about{padding:68px 0}.about-grid{grid-template-columns:1fr;gap:35px}.about-image{height:390px;margin-right:12px}.about-copy h2{font-size:39px}.contact{padding:54px 0}.contact-inner{display:block}.contact h2{font-size:38px}.contact .button{margin-top:23px}.footer-top{display:block}.footer-links{margin-top:22px;flex-wrap:wrap;gap:17px}.footer-bottom{flex-direction:column;gap:8px}}
-@media(max-width:370px){.product-photo{height:145px}.price-card ul,.price-card.full ul{grid-template-columns:1fr}.hero-image{height:340px}}
+:root{--bg:#eeeee5;--paper:#f9f8f3;--ink:#20251f;--muted:#74786e;--line:#d8d9ce;--green:#303a30;--olive:#626b50;--copper:#ad805c;--display:'Manrope',sans-serif;--body:'DM Sans',sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:84px}body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}button,input,select{font:inherit}.wrap{width:min(1240px,calc(100% - 80px));margin:auto}.material-symbols-outlined{font-size:20px;vertical-align:middle;font-weight:300}.announcement{height:30px;background:var(--green);color:#f4f2e9;display:flex;align-items:center;justify-content:center;font-size:9px;letter-spacing:1.8px;text-transform:uppercase}.header{height:76px;position:sticky;top:0;z-index:30;background:rgba(238,238,229,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{height:100%;display:flex;align-items:center;justify-content:space-between}.brand{font:800 21px var(--display);letter-spacing:2.8px;line-height:1}.brand small{display:block;font:600 8px var(--body);letter-spacing:2.2px;color:var(--muted);margin-top:5px}.nav-links{display:flex;gap:32px;align-items:center;font-size:11px;font-weight:600}.nav-links a{transition:color .2s}.nav-links a:hover{color:var(--copper)}.nav-action{display:flex;align-items:center;gap:8px;font-size:10px;font-weight:700;border-bottom:1px solid var(--ink);padding:8px 0}.menu{display:none;border:0;background:none;padding:8px;color:var(--ink)}
+.hero{padding:26px 0 76px}.hero-panel{background:var(--green);color:#f4f2e9;min-height:520px;position:relative;overflow:hidden;display:flex;align-items:center;padding:68px 7%}.hero-panel:before,.hero-panel:after{content:"";position:absolute;border:1px solid rgba(238,238,229,.13);border-radius:50%;width:600px;height:600px;right:-90px;top:50%;transform:translateY(-50%)}.hero-panel:after{width:430px;height:430px;right:-5px}.hero-content{position:relative;z-index:1;max-width:720px}.eyebrow{font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--copper)}.hero .eyebrow{color:#d2b18e}.hero h1{font:700 clamp(48px,7vw,88px)/.98 var(--display);letter-spacing:-4px;margin:24px 0 20px;max-width:760px}.hero h1 span{color:#d4b18a}.hero p{max-width:440px;color:#d0d3c9;font-size:13px;line-height:1.9;margin:0 0 28px}.hero-actions{display:flex;gap:22px;align-items:center}.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:46px;padding:0 19px;background:var(--paper);color:var(--ink);font-size:10px;font-weight:700;transition:.2s}.btn:hover{background:#d8d9ce;transform:translateY(-2px)}.hero-link{font-size:10px;font-weight:700;color:#f4f2e9;border-bottom:1px solid #b7a58d;padding:7px 0}.hero-index{position:absolute;right:7%;bottom:34px;z-index:1;font-size:9px;letter-spacing:2px;color:#bfc4b8}
+.section{padding:76px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:30px}.section-title{font:700 clamp(34px,4.5vw,54px)/1.08 var(--display);letter-spacing:-2px;margin:12px 0 0}.section-desc{max-width:320px;color:var(--muted);font-size:12px;line-height:1.8;margin:0}.categories{background:var(--paper);padding:66px 0}.category-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.category-card{min-height:178px;background:#e7e7dd;padding:22px;display:flex;flex-direction:column;justify-content:space-between;transition:background .2s,transform .2s}.category-card:hover{background:#dedfd3;transform:translateY(-3px)}.category-number{font-size:9px;letter-spacing:1.6px;color:var(--copper)}.category-card strong{font:700 20px var(--display);letter-spacing:-.6px}.category-card span:last-child{font-size:10px;color:var(--muted)}
+.catalog{background:var(--paper)}.catalog .section-head{margin-bottom:26px}.catalog-tools{display:flex;gap:10px;margin-bottom:20px}.searchbox{display:flex;align-items:center;gap:10px;flex:1;min-height:48px;padding:0 14px;background:white;border:1px solid var(--line)}.searchbox input{width:100%;border:0;outline:0;background:transparent;font-size:12px}.catalog-tools select{min-width:190px;border:1px solid var(--line);background:white;padding:0 14px;font-size:12px;color:var(--ink)}.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.product-card{background:#eeeee7;min-width:0}.product-photo{aspect-ratio:1/1;background:#e4e5dc;overflow:hidden}.product-photo img{width:100%;height:100%;object-fit:cover;transition:transform .6s}.product-card:hover .product-photo img{transform:scale(1.035)}.product-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#a0a79a}.product-placeholder .material-symbols-outlined{font-size:42px}.product-meta{padding:16px 16px 10px}.product-meta h3{font:700 16px var(--display);margin:0 0 7px}.product-meta p{font-size:11px;line-height:1.65;color:var(--muted);margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.product-price{font-size:12px;font-weight:700;color:var(--olive);margin-top:11px}.product-foot{margin:0 16px;padding:12px 0 15px;border-top:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:10px;color:var(--muted)}.product-foot button{border:0;background:none;color:var(--green);font-size:10px;font-weight:700;cursor:pointer}.catalog-state{grid-column:1/-1;padding:36px 18px;background:#eeeee7;text-align:center;color:var(--muted);font-size:12px}
+.pricing{background:#e3e4d9}.pricing .section-head{margin-bottom:14px}.price-intro{font-size:12px;color:var(--muted);margin:0 0 26px}.price-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.price-card{background:var(--paper);padding:23px 24px}.price-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}.price-card h3{font:700 16px var(--display);margin:0}.price{font-size:12px;font-weight:700;color:var(--olive);text-align:right;white-space:nowrap}.unit{display:block;font-size:9px;color:var(--muted);font-weight:500;margin-top:4px}.price-details{margin-top:14px;border-top:1px solid var(--line)}.price-details summary{list-style:none;display:flex;align-items:center;justify-content:space-between;padding:13px 0 0;font-size:11px;font-weight:700;color:var(--green);cursor:pointer}.price-details summary::-webkit-details-marker{display:none}.price-details summary .material-symbols-outlined{transition:transform .2s}.price-details[open] summary .material-symbols-outlined{transform:rotate(180deg)}.price-card h4{font-size:9px;letter-spacing:1.4px;text-transform:uppercase;color:var(--copper);margin:17px 0 9px}.price-card ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:7px 12px}.price-card li{font-size:10px;line-height:1.6;color:#666a60;padding-left:13px;position:relative}.price-card li:before{content:"";position:absolute;left:0;top:6px;width:4px;height:4px;border-radius:50%;background:var(--copper)}.price-card.full{grid-column:1/-1}.price-card.full ul{grid-template-columns:repeat(3,1fr)}.price-note{font-size:10px;line-height:1.8;color:var(--muted);margin:18px 0 0}
+.contact{background:var(--green);color:#f4f2e9;padding:66px 0}.contact-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}.contact .eyebrow{color:#d2b18e}.contact h2{font:700 clamp(34px,4.5vw,52px)/1.08 var(--display);letter-spacing:-2px;margin:12px 0}.contact p{max-width:430px;color:#cbd0c5;font-size:12px;line-height:1.8;margin:0}.contact .btn{background:#f4f2e9;white-space:nowrap}
+.footer{background:#20251f;color:#f4f2e9;padding:36px 0 18px}.footer-top{display:flex;justify-content:space-between;gap:25px;padding-bottom:28px}.footer p{max-width:300px;color:#b6bbae;font-size:10px;line-height:1.8}.footer-links{display:flex;gap:22px;align-items:center;font-size:10px;color:#d8dbd2}.footer-bottom{border-top:1px solid #41483e;padding-top:16px;display:flex;justify-content:space-between;font-size:9px;color:#aeb3a8}
+@media(max-width:850px){.wrap{width:calc(100% - 48px)}.hero-panel{min-height:470px}.category-grid{grid-template-columns:repeat(2,1fr)}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.wrap{width:calc(100% - 32px)}.announcement{height:27px;font-size:7px;letter-spacing:1.2px}.header{height:66px}.brand{font-size:19px}.nav-links{display:none;position:absolute;top:66px;left:0;right:0;background:var(--bg);padding:22px 20px;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start;gap:20px}.nav-links.open{display:flex}.nav-action{display:none}.menu{display:block}.hero{padding:12px 0 38px}.hero-panel{min-height:430px;padding:38px 25px;align-items:flex-start}.hero-panel:before{width:390px;height:390px;right:-230px;top:75%}.hero-panel:after{width:280px;height:280px;right:-175px;top:75%}.hero h1{font-size:clamp(43px,11.8vw,62px);letter-spacing:-2.5px;margin:20px 0 15px}.hero p{font-size:12px;line-height:1.75;max-width:32ch}.hero-index{right:24px;bottom:20px;font-size:8px}.hero-actions{gap:16px}.btn{min-height:44px;padding:0 14px;font-size:10px}.hero-link{font-size:10px}.section{padding:54px 0}.section-head{display:block;margin-bottom:22px}.section-title{font-size:34px;letter-spacing:-1.3px}.section-desc{margin-top:10px;font-size:11px}.categories{padding:48px 0}.category-grid{gap:8px}.category-card{min-height:142px;padding:15px}.category-card strong{font-size:16px}.category-card span:last-child{font-size:9px}.catalog-tools{display:grid;grid-template-columns:1fr;gap:8px}.searchbox,.catalog-tools select{min-height:46px;font-size:12px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product-meta{padding:11px 9px 8px}.product-meta h3{font-size:13px;line-height:1.35}.product-meta p{font-size:10px;line-height:1.5}.product-price{font-size:11px;margin-top:8px}.product-foot{margin:0 9px;padding:9px 0 11px;font-size:9px}.product-foot button{font-size:9px}.pricing{padding:52px 0}.price-intro{font-size:11px;line-height:1.6;margin-bottom:18px}.price-grid{grid-template-columns:1fr;gap:8px}.price-card,.price-card.full{grid-column:auto;padding:17px 15px}.price-card h3{font-size:14px;line-height:1.35}.price{font-size:11px}.price-card ul,.price-card.full ul{grid-template-columns:1fr;gap:5px}.price-card li{font-size:11px}.price-card h4{font-size:9px}.contact{padding:48px 0}.contact-inner{display:block}.contact h2{font-size:36px}.contact p{font-size:11px}.contact .btn{margin-top:20px}.footer-top{display:block}.footer-links{margin-top:20px;flex-wrap:wrap;gap:17px}.footer-bottom{flex-direction:column;gap:8px}}
+@media(max-width:370px){.wrap{width:calc(100% - 26px)}.product-grid{gap:7px}.product-meta{padding:9px 7px 7px}.product-meta h3{font-size:12px}.hero-panel{padding:32px 20px}.hero h1{font-size:42px}.price-top{gap:8px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-
-/* LUKI ORIGINAL WARM NATURAL PALETTE */
-:root{--paper:#eeeee5;--white:#f9f8f3;--ink:#222720;--muted:#74786e;--line:#d7d7cc;--forest:#303a30;--olive:#626b50;--copper:#ad805c}
-body{background:var(--paper);color:var(--ink)}
-.topline{background:var(--forest);color:#e8e8df}
-.header{background:rgba(238,238,229,.94);border-bottom:1px solid rgba(48,58,48,.12)}
-.brand{color:var(--ink)}.brand small{color:var(--muted)}
-.links{color:#62665d}.links a:hover{color:var(--copper)}
-.nav-note{color:var(--muted)}.nav-cta,.button{background:var(--forest);border-color:var(--forest);color:white}
-.nav-cta:hover,.button:hover{background:var(--olive);border-color:var(--olive);color:white}
-.menu{color:var(--ink)}
-.hero h1{color:var(--ink)}.hero h1 em{color:var(--olive)}
-.hero-copy>p,.hero-caption{color:var(--muted)}
-.hero-kicker:before{background:var(--copper)}
-.hero-visual{background:linear-gradient(145deg,#626b50 0%,#303a30 58%,#414a3b 100%);color:#f9f8f3;border:1px solid rgba(173,128,92,.35)}
-.hero-visual:before,.hero-visual:after{border-color:rgba(238,238,229,.22)}
-.hero-visual-top,.hero-visual-bottom{color:#e0e2d8}
-.hero-monogram{color:#f9f8f3}.hero-monogram span{color:#d4aa82}
-.intro h2,.section-title{color:var(--ink)}
-.intro p,.section-head>p,.service-top>p{color:var(--muted)}
-.projects{background:#e4e2d9}
-.projects .section-title{color:var(--ink)}.projects .section-head>p{color:var(--muted)}
-.project-large,.project-small{background:#c9c6ba}
-.project-overlay{background:linear-gradient(transparent,rgba(20,25,20,.75))}
-.project-overlay span{color:#e0c8ad}
-.services{background:transparent;color:var(--ink)}
-.services .section-title{color:var(--ink)}.services .eyebrow{color:var(--copper)}
-.services .service-top>p{color:var(--muted)}
-.service-grid,.service+.service{border-color:var(--line)}
-.service .num{color:var(--copper)}.service p{color:var(--muted)}
-.pricing{background:var(--forest);color:#f5f3ec}
-.pricing .section-title{color:#f5f3ec}
-.pricing .price-intro,.pricing .section-head>p,.pricing .price-note{color:#c1c6b9}
-.price-card{background:#f6f5ef;border-color:#d8d0c1;color:var(--ink)}
-.price-card h3{color:var(--ink)}.price{color:var(--olive)}
-.price-card h4{color:var(--copper)}.price-card li{color:#666a60}
-.price-card li:before{background:var(--copper)}
-.catalog{background:var(--white);color:var(--ink)}
-.catalog .section-title{color:var(--ink)}.catalog .section-head>p{color:var(--muted)}
-.searchbox,.catalog-tools select{background:white;border-color:var(--line)}
-.product-card{background:#eeece5}
-.product-meta h3{color:var(--ink)}.product-meta p,.product-foot{color:#707168}
-.product-price{color:var(--olive)}
-.about{background:var(--paper);color:var(--ink)}
-.about-copy h2{color:var(--ink)}.about-copy>p{color:var(--muted)}
-.about-detail{border-color:var(--line)}.about-detail strong{color:var(--ink)}
-.about-detail small{color:var(--muted)}.about-detail .material-symbols-outlined{color:var(--copper)}
-.about-mark{background:linear-gradient(145deg,#626b50,#303a30);border:1px solid rgba(173,128,92,.35)}
-.about-mark:before{border-color:rgba(238,238,229,.22)}
-.about-mark-kicker,.about-mark-caption{color:#e0e2d8}
-.about-mark strong{color:#f9f8f3}.about-mark strong span{color:#d4aa82}
-.about-image:after{border-color:var(--copper)}
-.contact{background:#dcd9ce;color:var(--ink)}
-.contact .eyebrow{color:#92744e}.contact h2{color:var(--ink)}
-.contact p{color:var(--muted)}
-.contact .button{background:var(--forest);border-color:var(--forest);color:white}
-.contact .button:hover{background:var(--olive);border-color:var(--olive)}
-.footer{background:#222720;color:#f0eee7}
-.footer p,.footer-bottom{color:#aeb3a8}
-.footer-links{color:#d8dbd2}.footer-bottom{border-color:#41483e}
-@media(max-width:650px){
- .links{background:var(--paper);border-color:var(--line);color:var(--ink)}
- .hero-visual{background:linear-gradient(145deg,#626b50 0%,#303a30 58%,#414a3b 100%)}
- .contact{padding:54px 0}
-}
-
-/* ORIGINAL PHOTOS RESERVED FOR THE PRODUCT CATALOG */
-.hero-visual{min-height:650px;background:linear-gradient(145deg,#282a22 0%,#171914 58%,#303126 100%);color:#eee9df;display:flex;flex-direction:column;justify-content:space-between;padding:28px 32px;position:relative;overflow:hidden;border:1px solid rgba(198,168,121,.24)}
-.hero-visual:before,.hero-visual:after{content:"";position:absolute;border:1px solid rgba(198,168,121,.2);border-radius:50%;width:520px;height:520px;left:50%;top:50%;transform:translate(-50%,-50%)}
-.hero-visual:after{width:390px;height:390px}
-.hero-visual-top,.hero-visual-bottom{display:flex;justify-content:space-between;gap:15px;position:relative;z-index:1;font-size:8px;letter-spacing:2px;color:#bdb5a5}
-.hero-monogram{position:relative;z-index:1;text-align:center;font:500 clamp(130px,20vw,260px)/.8 var(--serif);letter-spacing:-20px;color:#e8dfcf}
-.hero-monogram span{color:#c7a879}
-.approach-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #45463d;border-bottom:1px solid #45463d;margin-top:42px}
-.approach-grid article{padding:30px 28px 32px 0}
-.approach-grid article+article{padding-left:28px;border-left:1px solid #45463d}
-.approach-grid article>span{font-size:8px;letter-spacing:2px;color:#c7a879}
-.approach-grid h3{font:600 23px var(--serif);margin:22px 0 10px;color:#f0ece3}
-.approach-grid p{font-size:11px;line-height:2;color:#aaa89d;margin:0;max-width:290px}
-.about-mark{height:440px;background:linear-gradient(145deg,#282a22,#11140f);border:1px solid rgba(198,168,121,.3);display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:34px;color:#eee9df;position:relative;overflow:hidden}
-.about-mark:before{content:"";position:absolute;width:330px;height:330px;border:1px solid rgba(198,168,121,.22);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
-.about-mark-kicker,.about-mark-caption{font-size:8px;letter-spacing:3px;text-align:center;color:#bdb5a5;position:relative}
-.about-mark strong{font:500 125px/.9 var(--serif);letter-spacing:-12px;position:relative;color:#e8dfcf}
-.about-mark strong span{color:#c7a879}
-@media(max-width:900px){.hero-visual{min-height:550px}}
-@media(max-width:650px){.hero-visual{min-height:350px;padding:20px}.hero-monogram{font-size:155px;letter-spacing:-12px}.approach-grid{grid-template-columns:1fr;margin-top:25px}.approach-grid article,.approach-grid article+article{padding:22px 0;border-left:0;border-bottom:1px solid #45463d}.approach-grid article:last-child{border-bottom:0}.approach-grid h3{margin:12px 0 7px}.about-mark{height:330px}.about-mark strong{font-size:100px}}
-
-/* V2N SUPPLY DESIGN DIRECTION — LUKI ADAPTATION */
-:root{--paper:#eeeee5;--white:#fbfaf6;--ink:#222720;--muted:#74786e;--line:#d9d9cf;--forest:#303a30;--olive:#626b50;--copper:#ad805c;--sans:'DM Sans',sans-serif;--serif:'Manrope',sans-serif}
-html{scroll-padding-top:100px}body{background:var(--white);font-family:var(--sans);color:var(--ink)}
-.topline{height:32px;background:var(--forest);font-size:9px;letter-spacing:1.7px}
-.header{height:78px;background:rgba(251,250,246,.97);border-bottom:1px solid var(--line);box-shadow:none}
-.nav{display:grid;grid-template-columns:1fr auto 1fr;gap:20px}
-.brand{font:800 25px/.9 var(--serif);letter-spacing:-1.5px}
-.brand small{display:block;margin-top:5px;font:700 7px var(--sans);letter-spacing:1.7px;color:var(--muted)}
-.links{display:flex;gap:clamp(13px,1.8vw,26px);font-size:9px;font-weight:700}
-.links a{color:#565b52;white-space:nowrap}.links a:hover{color:var(--copper)}
-.nav-end{justify-self:end;gap:14px}.nav-note{font-size:9px}.nav-cta,.button{min-height:43px;padding:0 17px;border:1px solid var(--forest);background:var(--forest);font:700 9px var(--sans);letter-spacing:.4px;transition:.2s}
-.nav-cta:hover,.button:hover{background:var(--olive);border-color:var(--olive);transform:none}
-.hero{padding:34px 0 55px;background:var(--white)}
-.hero-layout{grid-template-columns:.92fr 1.08fr;gap:6%;min-height:520px}
-.hero-copy{padding:28px 0;justify-content:center}
-.hero h1{font:800 clamp(48px,6vw,78px)/.98 var(--serif);letter-spacing:-.075em;margin:20px 0 17px}
-.hero h1 em{font-weight:500;color:var(--olive)}
-.hero-copy>p{font-size:12px;line-height:1.95;color:var(--muted);max-width:430px}
-.hero-actions{gap:20px}.hero-caption{margin-top:34px;font-size:8px;letter-spacing:1.6px}
-.hero-visual{min-height:520px;padding:27px 30px;background:linear-gradient(145deg,#626b50,#303a30 60%,#414a3b);border:0}
-.hero-visual:before,.hero-visual:after{border-color:#eeeee533}
-.hero-visual-top,.hero-visual-bottom{font-size:8px;letter-spacing:1.8px;color:#e0e2d8}
-.hero-monogram{font:500 clamp(130px,19vw,245px)/.8 var(--serif);letter-spacing:-.1em;color:#fbfaf6}
-.hero-monogram span{color:#d4aa82}
-.intro{padding:60px 0 72px;grid-template-columns:1.05fr .95fr;gap:10%;align-items:center}
-.intro h2{font:700 clamp(29px,3.2vw,43px)/1.15 var(--serif);letter-spacing:-1.8px}
-.intro p{font-size:11px;line-height:2;color:var(--muted)}
-.projects{padding:76px 0;background:#e8e8df}
-.section-head{margin-bottom:30px}.section-title{font:700 clamp(32px,4vw,48px)/1.08 var(--serif);letter-spacing:-2px}
-.section-head>p,.service-top>p{font-size:11px;line-height:1.9;color:var(--muted)}
-.approach-grid{margin-top:38px;border-color:#cfd0c4}
-.approach-grid article+article{border-color:#cfd0c4}
-.approach-grid article>span,.service .num{color:var(--copper);font-size:8px;letter-spacing:1.8px;font-weight:700}
-.approach-grid h3,.service h3{font:700 20px var(--serif)}
-.approach-grid p,.service p{font-size:10px;line-height:1.9;color:var(--muted)}
-.services{padding:80px 0 85px;background:var(--white)}
-.service-grid{margin-top:38px}
-.pricing{padding:82px 0 88px;background:var(--forest)}
-.pricing .section-title{color:#f5f3ec}
-.pricing .section-head>p,.pricing .price-intro,.pricing .price-note{color:#c7cbbf}
-.price-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.price-card{padding:24px 25px;background:#fbfaf6;border:1px solid #e1dfd5;color:var(--ink)}
-.price-card h3{font:700 17px var(--serif)}.price{color:var(--olive)}
-.price-card h4{color:var(--copper)}.price-card li{font-size:9px;color:#666a60}
-.catalog{padding:82px 0 88px;background:#f4f3ed}
-.catalog-tools{gap:10px}.searchbox,.catalog-tools select{background:white;border-color:var(--line)}
-.product-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}
-.product-card{padding:9px;background:white;border:1px solid #e5e3d9;transition:transform .2s}
-.product-card:hover{transform:translateY(-3px)}
-.product-photo{height:280px;background:#e5e3d9}
-.product-meta{padding:14px 8px 12px}.product-meta h3{font:700 15px var(--serif)}
-.product-meta p,.product-foot{color:var(--muted);font-size:9px}
-.product-price{color:var(--olive);font-weight:800}
-.product-foot{border-color:var(--line)}.product-foot button{color:var(--olive)}
-.catalog-state{background:white;color:var(--muted)}
-.about{padding:82px 0;background:var(--white)}
-.about-mark{height:430px;background:linear-gradient(145deg,#626b50,#303a30);border:0}
-.about-mark:before{border-color:#eeeee533}
-.about-mark strong{font:500 120px/.9 var(--serif);letter-spacing:-.1em;color:#fbfaf6}
-.about-mark strong span{color:#d4aa82}
-.about-copy h2{font:700 clamp(34px,4vw,51px)/1.1 var(--serif);letter-spacing:-2px}
-.about-copy>p{font-size:11px;line-height:2;color:var(--muted)}
-.contact{padding:65px 0;background:#e4e3d9}
-.contact h2{font:700 clamp(34px,4vw,49px)/1.08 var(--serif);letter-spacing:-2px}
-.contact p{font-size:11px;line-height:1.9;color:var(--muted)}
-.footer{padding:48px 0 20px;background:#222720}
-.footer .brand{color:#f0eee7}.footer .brand small{color:#aeb3a8}
-.footer-links{gap:23px;flex-wrap:wrap}.footer-links a{font-size:9px;color:#e2e4dc}
-@media(max-width:1000px){.nav-note{display:none}.links{gap:12px}.links a{font-size:8px}.hero-layout{grid-template-columns:.9fr 1.1fr;gap:4%}.hero-visual{min-height:470px}.product-photo{height:235px}}
-@media(max-width:760px){
- html{scroll-padding-top:72px}.header{height:67px}.nav{grid-template-columns:1fr auto;gap:10px}
- .brand{font-size:23px}.links{display:none;position:absolute;top:66px;left:0;right:0;padding:15px 5% 20px;background:var(--white);border-bottom:1px solid var(--line);box-shadow:0 12px 20px #2227200d;flex-direction:column;gap:0}
- .links.open{display:flex}.links a{padding:14px 0;border-bottom:1px solid var(--line);font-size:10px}
- .nav-cta{display:none}.menu{display:block}.nav-end{gap:10px}
- .hero{padding:18px 0 38px}.hero-layout{display:flex;flex-direction:column;gap:22px;min-height:0}
- .hero-copy{padding:10px 0 0}.hero h1{font-size:clamp(48px,12vw,66px);margin:15px 0 13px}
- .hero-copy>p{font-size:11px}.hero-actions{gap:15px;flex-wrap:wrap}.hero-caption{margin-top:23px}
- .hero-visual{min-height:340px;padding:20px}.hero-monogram{font-size:clamp(135px,37vw,185px)}
- .intro{padding:42px 0 52px;grid-template-columns:1fr;gap:14px}.intro h2{font-size:32px}.intro p{font-size:10px}
- .projects,.services,.pricing,.catalog,.about{padding:58px 0}
- .section-head{display:block;margin-bottom:23px}.section-title{font-size:35px}.section-head>p{margin-top:12px}
- .approach-grid{grid-template-columns:1fr;margin-top:24px}
- .approach-grid article,.approach-grid article+article{padding:20px 0;border-left:0;border-bottom:1px solid #cfd0c4}
- .approach-grid article:last-child{border-bottom:0}
- .service-top{display:block}.service-top>p{margin-top:12px}.service-grid{grid-template-columns:1fr;margin-top:23px}
- .service,.service+.service{padding:20px 0;border-left:0;border-bottom:1px solid var(--line)}
- .service:last-child{border-bottom:0}
- .price-grid{grid-template-columns:1fr;gap:9px}.price-card,.price-card.full{grid-column:auto;padding:19px 17px}
- .price-card ul,.price-card.full ul{grid-template-columns:1fr 1fr}.price-card li{font-size:8px}
- .catalog-tools{display:grid;grid-template-columns:1fr}.catalog-tools select{height:44px}
- .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product-photo{height:auto;aspect-ratio:4/5}
- .product-meta{padding:11px 5px}.product-meta h3{font-size:12px}.product-meta p{font-size:8px}
- .product-foot{padding:9px 5px 3px;font-size:7px}.product-foot button{font-size:8px}
- .about-grid{grid-template-columns:1fr;gap:27px}.about-mark{height:310px;padding:20px}.about-mark strong{font-size:100px}
- .about-copy h2{font-size:37px}.contact{padding:48px 0}.contact-inner{display:block}
- .contact h2{font-size:38px}.contact .button{margin-top:18px}
- .footer-top{display:block}.footer-links{margin-top:22px;gap:15px}.footer-bottom{display:flex;flex-direction:column;gap:7px}
-}
-@media(max-width:370px){.product-grid{gap:7px}.price-card ul,.price-card.full ul{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-
-
-/* MODERN MINIMALIST PROFESSIONAL — FINAL DESIGN SYSTEM */
-:root{
- --paper:#f5f5f0;--white:#fff;--ink:#202820;--muted:#73796f;
- --line:#e2e5dc;--forest:#303a30;--olive:#626b50;--copper:#ad805c;
- --serif:'Manrope',sans-serif;--sans:'DM Sans',sans-serif
-}
-body{background:#f7f8f5;color:var(--ink);font-family:var(--sans)}
-.wrap{width:min(1240px,calc(100% - 64px))}
-.topline{height:30px;background:#263128;font-size:9px;letter-spacing:1.7px}
-.header{height:76px;background:rgba(255,255,255,.94);border-bottom:1px solid #e8eae4}
-.brand{font-size:21px;letter-spacing:3px}.brand small{font-size:8px;letter-spacing:2.2px}
-.links{gap:27px;font-size:11px;color:#4d554d}
-.nav-cta,.button{background:var(--forest);border:1px solid var(--forest);border-radius:2px;padding:14px 19px;font-size:10px;letter-spacing:.2px}
-.nav-cta:hover,.button:hover{background:#4a5848;border-color:#4a5848;transform:translateY(-1px)}
-.hero{padding:34px 0 76px}
-.hero-layout{grid-template-columns:.92fr 1.08fr;gap:7%;min-height:560px;align-items:center}
-.hero-copy{padding:35px 0}
-.eyebrow{font-size:9px;letter-spacing:1.9px;color:#77816b}
-.hero h1{font-size:clamp(48px,5.5vw,76px);line-height:1.04;letter-spacing:-3.8px;font-weight:700;margin:24px 0 18px}
-.hero h1 em{color:var(--olive)}
-.hero-copy>p{font-size:13px;line-height:1.9;color:#73796f;max-width:410px}
-.hero-caption{font-size:8px;letter-spacing:1.5px;margin-top:42px}
-.hero-visual{min-height:510px;border:0;border-radius:2px;background:linear-gradient(145deg,#3d493b,#273229);padding:25px 28px}
-.hero-visual:before{width:440px;height:440px;border-color:#ffffff18}
-.hero-visual:after{width:330px;height:330px;border-color:#ffffff18}
-.hero-monogram{font-size:clamp(140px,18vw,220px);letter-spacing:-.12em}
-.intro{padding:10px 0 84px;gap:8%;align-items:center}
-.intro h2,.section-title{font-size:clamp(32px,3.8vw,49px);line-height:1.14;letter-spacing:-2px;font-weight:650}
-.intro p,.section-head>p,.service-top>p{font-size:12px;line-height:2;color:#73796f}
-.projects{padding:78px 0 82px;background:#eef0e9}
-.section-head{margin-bottom:34px}
-.approach-grid{margin-top:35px;border-color:#d8ddd3}
-.approach-grid article{padding:28px 25px 28px 0}
-.approach-grid article+article{border-color:#d8ddd3}
-.approach-grid article>span,.service .num{font-size:8px;letter-spacing:1.7px;color:#818a73}
-.approach-grid h3,.service h3{font-size:19px;font-weight:650;letter-spacing:-.4px}
-.approach-grid p,.service p{font-size:11px;line-height:1.9;color:#747b70}
-.services{padding:82px 0;background:#fff}
-.service-grid{margin-top:35px;border-color:var(--line)}
-.service{padding:26px 25px 27px 0}
-.service+.service{border-color:var(--line)}
-.service h3{margin:15px 0 8px}
-.pricing{padding:82px 0 88px;background:#29352c}
-.pricing .eyebrow{color:#c2c9b8}
-.pricing .section-title{color:#fff}
-.pricing .section-head>p,.pricing .price-intro,.pricing .price-note{color:#c5cbbf}
-.price-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.price-card{padding:24px 25px;background:#fff;border:1px solid #e6e8e1;border-radius:2px}
-.price-top{align-items:flex-start}
-.price-card h3{font-size:16px;font-weight:650;letter-spacing:-.3px}
-.price{font-size:13px;color:#52634e}
-.price-card h4{font-size:8px;letter-spacing:1.4px;color:#8b765e}
-.price-card li{font-size:10px;line-height:1.7;color:#666e64}
-.price-card li:before{background:#87927b}
-.catalog{padding:82px 0 88px;background:#f7f8f5}
-.catalog-tools{margin:27px 0 20px}
-.searchbox,.catalog-tools select{min-height:46px;border:1px solid #e1e5dc;border-radius:2px;background:#fff}
-.product-grid{gap:16px}
-.product-card{padding:0;background:#fff;border:1px solid #e7e9e3;border-radius:2px;transition:transform .2s,border-color .2s}
-.product-card:hover{transform:translateY(-3px);border-color:#c9d0c3}
-.product-photo{height:280px;background:#eceee8}
-.product-meta{padding:16px 15px 13px}
-.product-meta h3{font-size:15px;font-weight:650}
-.product-meta p{font-size:10px;line-height:1.8;color:#73796f}
-.product-price{font-size:11px;color:#52634e}
-.product-foot{margin:0 15px;padding:12px 0 14px;border-color:#e8eae5}
-.about{padding:82px 0;background:#fff}
-.about-grid{gap:9%}
-.about-mark{height:410px;border-radius:2px;background:linear-gradient(145deg,#3e4a3c,#28342b)}
-.about-mark:before{width:300px;height:300px;border-color:#ffffff20}
-.about-mark strong{font-size:116px;letter-spacing:-.1em}
-.about-copy h2{font-size:clamp(34px,3.8vw,49px);font-weight:650;letter-spacing:-2px}
-.about-copy>p{font-size:12px;line-height:2;color:#73796f}
-.about-detail{border-color:#e4e7df}
-.contact{padding:65px 0;background:#eef0e9}
-.contact h2{font-size:clamp(32px,3.8vw,47px);font-weight:650;letter-spacing:-1.8px}
-.contact p{font-size:12px;line-height:1.9}
-.footer{background:#202820;padding:42px 0 20px}
-.footer-top{padding-bottom:29px}
-.footer p{font-size:10px;line-height:1.9}
-.footer-bottom{border-color:#414a40}
-@media(max-width:900px){
- .wrap{width:calc(100% - 48px)}.hero-layout{gap:4%;min-height:500px}
- .hero-visual{min-height:450px}.hero h1{font-size:clamp(48px,6vw,65px)}
- .product-photo{height:230px}
-}
-@media(max-width:760px){
- .wrap{width:calc(100% - 36px)}.header{height:68px}
- .links{top:67px;background:#fff}.links a{font-size:11px}
- .hero{padding:18px 0 44px}.hero-layout{gap:18px}
- .hero-copy{padding:8px 0 0}.hero h1{font-size:clamp(46px,11.5vw,62px);letter-spacing:-2.8px}
- .hero-visual{min-height:320px;padding:19px}
- .hero-monogram{font-size:clamp(130px,36vw,175px)}
- .intro{padding:44px 0 55px;gap:13px}
- .intro h2,.section-title{font-size:34px;letter-spacing:-1.5px}
- .projects,.services,.pricing,.catalog,.about{padding:58px 0}
- .approach-grid{grid-template-columns:1fr;margin-top:23px}
- .approach-grid article,.approach-grid article+article{padding:19px 0;border-left:0;border-bottom:1px solid #d8ddd3}
- .approach-grid article:last-child{border-bottom:0}
- .service-grid{grid-template-columns:1fr;margin-top:23px}
- .service,.service+.service{padding:19px 0;border-left:0;border-bottom:1px solid var(--line)}
- .service:last-child{border-bottom:0}
- .price-grid{grid-template-columns:1fr;gap:10px}
- .price-card,.price-card.full{grid-column:auto;padding:19px 17px}
- .price-card ul,.price-card.full ul{grid-template-columns:1fr 1fr}
- .catalog-tools{display:grid;grid-template-columns:1fr}
- .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
- .product-photo{height:auto;aspect-ratio:4/5}
- .product-meta{padding:11px 9px}.product-meta h3{font-size:12px}
- .product-foot{margin:0 9px;padding:9px 0 11px}
- .about-grid{grid-template-columns:1fr;gap:27px}
- .about-mark{height:300px}.about-mark strong{font-size:98px}
- .contact{padding:48px 0}.contact-inner{display:block}
- .contact h2{font-size:36px}.contact .button{margin-top:18px}
- .footer-top{display:block}.footer-links{margin-top:20px}
-}
-@media(max-width:370px){
- .wrap{width:calc(100% - 28px)}.product-grid{gap:7px}
- .price-card ul,.price-card.full ul{grid-template-columns:1fr}
-}
-
-
-/* REMOVE GREEN HERO PANEL */
-.hero-layout{grid-template-columns:1fr;min-height:0}
-.hero-copy{max-width:760px}
-
-/* CATALOG-FIRST, CONCISE LAYOUT */
-.hero{padding:24px 0 42px}
-.hero-layout{min-height:390px;grid-template-columns:1fr 1fr;gap:6%;align-items:center}
-.hero-copy{padding:20px 0}
-.hero h1{font-size:clamp(42px,5vw,66px);letter-spacing:-3px;margin:18px 0 13px}
-.hero-copy>p{font-size:12px;line-height:1.7;margin-bottom:22px}
-.hero-visual{min-height:360px}
-.hero-caption{display:none}
-.catalog{padding:64px 0 76px}
-.catalog .section-head{margin-bottom:24px}
-.catalog .section-title{font-size:clamp(34px,4vw,48px)}
-.catalog .section-head>p{font-size:11px;max-width:280px}
-.product-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-.product-photo{height:300px}
-.product-placeholder{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#eceee8;color:#a0a79a}.product-placeholder .material-symbols-outlined{font-size:42px}
-.product-card{box-shadow:0 3px 16px #20282008}
-.product-meta h3{font-size:15px}
-.pricing{padding:64px 0}
-.pricing .section-title{font-size:clamp(30px,3.5vw,42px)}
-.price-intro{font-size:11px;margin:8px 0 24px}
-.price-card{padding:20px}
-.contact{padding:42px 0}
-.contact h2{font-size:32px;margin:9px 0}
-.contact p{font-size:11px}
-.footer{padding-top:30px}
-@media(max-width:760px){
- .hero{padding:14px 0 28px}.hero-layout{min-height:0;gap:17px}
- .hero-visual{min-height:270px}.hero-copy{padding:5px 0}
- .hero h1{font-size:clamp(42px,11vw,58px)}
- .catalog{padding:46px 0 55px}
- .catalog .section-head{display:block}
- .catalog .section-head>p{margin-top:8px}
- .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
- .product-photo{height:auto;aspect-ratio:4/5}
- .product-meta h3{font-size:12px}
- .pricing{padding:48px 0}
- .contact{padding:38px 0}
-}
-
-
-/* TYPOGRAPHY & COPY REFINEMENT — LUKI FURNITURE */
-:root{--serif:'Manrope',sans-serif;--sans:'DM Sans',sans-serif}
-body{font-family:var(--sans);font-size:14px}
-h1,h2,h3,.brand,.image-stamp b{font-family:var(--serif)}
-.eyebrow{letter-spacing:1.5px;font-size:9px}
-.hero h1{line-height:1.08;letter-spacing:-3.2px}
-.hero-copy>p{max-width:470px;line-height:1.85;font-size:13px}
-.section-title,.intro h2,.about-copy h2,.contact h2{line-height:1.16;letter-spacing:-1.7px}
-.section-head>p,.intro p,.service-top>p,.about-copy>p,.contact p{line-height:1.9}
-.nav-cta,.button{font-family:var(--sans);font-size:11px;letter-spacing:0}
-.product-meta h3,.price-card h3,.service h3{letter-spacing:-.25px}
-.product-meta p,.price-card li,.price-note{line-height:1.75}
-.footer p{line-height:1.85}
-@media(max-width:760px){
- .hero h1{line-height:1.08;letter-spacing:-2.5px}
- .section-title,.intro h2,.about-copy h2,.contact h2{letter-spacing:-1.2px}
- .hero-copy>p{font-size:12px}
-}
-
-
-/* MOBILE-FIRST READABILITY REFINEMENT */
-.hero-layout{grid-template-columns:minmax(0,1fr);min-height:0}
-.hero-copy{max-width:720px}
-.hero h1{max-width:760px}
-.catalog .section-title{max-width:620px}
-.catalog .section-head>p{max-width:390px}
-.price-details{margin-top:14px;border-top:1px solid var(--line)}
-.price-details summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0 2px;color:var(--olive);font-size:11px;font-weight:700;cursor:pointer}
-.price-details summary::-webkit-details-marker{display:none}
-.price-details summary .material-symbols-outlined{transition:transform .2s}
-.price-details[open] summary .material-symbols-outlined{transform:rotate(180deg)}
-.price-details-content{padding-top:5px}
-.price-card h4{margin-top:17px}
-@media(max-width:760px){
- .wrap{width:calc(100% - 32px)}
- .topline{font-size:7px;letter-spacing:1px}
- .hero{padding:30px 0 38px}
- .hero-layout{display:block}
- .hero-copy{padding:0}
- .hero h1{font-size:clamp(38px,10.5vw,50px);line-height:1.12;letter-spacing:-1.9px;margin:14px 0}
- .hero-copy>p{font-size:14px;line-height:1.65;max-width:34ch;margin-bottom:20px}
- .hero-actions{gap:14px}
- .button{min-height:46px;padding:0 16px;font-size:11px}
- .text-link{font-size:11px}
- .catalog{padding:42px 0 48px}
- .catalog .section-head{margin-bottom:18px}
- .catalog .section-title{font-size:30px;line-height:1.2;letter-spacing:-1px;max-width:19ch}
- .catalog .section-head>p{font-size:13px;line-height:1.6;margin-top:9px}
- .catalog-tools{gap:8px;margin:20px 0 15px}
- .searchbox,.catalog-tools select{min-height:48px;font-size:13px}
- .searchbox input{font-size:13px}
- .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
- .product-card{min-width:0}
- .product-photo{aspect-ratio:1/1;height:auto}
- .product-meta{padding:12px 10px 9px}
- .product-meta h3{font-size:13px;line-height:1.35;margin-bottom:5px}
- .product-meta p{font-size:11px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
- .product-price{font-size:12px;margin-top:8px}
- .product-foot{margin:0 10px;padding:10px 0 12px;font-size:10px;gap:6px}
- .product-foot button{font-size:10px;white-space:nowrap}
- .catalog-state{font-size:13px;line-height:1.6;padding:26px 16px}
- .pricing{padding:46px 0}
- .pricing .section-head{margin-bottom:12px}
- .pricing .section-title{font-size:30px;line-height:1.2;letter-spacing:-1px}
- .pricing .section-head>p{font-size:13px;line-height:1.6;margin-top:9px}
- .price-intro{font-size:13px;line-height:1.65;margin:12px 0 18px}
- .price-grid{grid-template-columns:minmax(0,1fr);gap:10px}
- .price-card,.price-card.full{padding:17px 15px}
- .price-top{align-items:center;gap:10px;padding-bottom:12px}
- .price-card h3{font-size:14px;line-height:1.35}
- .price{font-size:12px;line-height:1.3}
- .unit{font-size:10px}
- .price-details{margin-top:10px}
- .price-details summary{font-size:12px;padding:11px 0 2px}
- .price-card h4{font-size:10px;letter-spacing:1px;margin:15px 0 8px}
- .price-card ul,.price-card.full ul{grid-template-columns:minmax(0,1fr);gap:6px}
- .price-card li{font-size:12px;line-height:1.5;padding-left:14px}
- .price-card li:before{top:7px}
- .price-note{font-size:11px;line-height:1.65;margin-top:16px}
- .contact{padding:38px 0}
- .contact h2{font-size:29px;line-height:1.2;letter-spacing:-1px}
- .contact p{font-size:13px;line-height:1.65}
- .footer p{font-size:12px}
- .footer-links{gap:18px}
- .footer-links a{font-size:11px}
- .footer-bottom{font-size:10px}
-}
-@media(max-width:380px){
- .wrap{width:calc(100% - 28px)}
- .product-grid{gap:8px}
- .product-meta{padding:10px 8px 8px}
- .product-meta h3{font-size:12px}
- .product-meta p{font-size:10px}
- .price-top{align-items:flex-start}
- .price{font-size:11px}
-}
-
 </style>
 </head>
 <body>
-<div class="topline">LUKI FURNITURE <span style="color:#c9a989;padding:0 9px">·</span> KITCHEN SET & INTERIOR CUSTOM</div>
-<header class="header"><div class="wrap nav"><a class="brand" href="#">LUKI<small>FURNITURE CUSTOM</small></a><nav class="links" id="navLinks"><a href="#katalog">Katalog</a><a href="#harga">Daftar Harga</a><a href="#kontak">Kontak</a></nav><div class="nav-end"><a class="nav-cta" href="#katalog">Lihat katalog <span class="material-symbols-outlined">north_east</span></a><button class="menu" id="menu" aria-label="Buka navigasi" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button></div></div></header>
+<div class="announcement">LUKI FURNITURE <span style="padding:0 8px;color:#d2b18e">·</span> KITCHEN SET & INTERIOR CUSTOM</div>
+<header class="header"><div class="wrap nav"><a class="brand" href="#">LUKI<small>FURNITURE CUSTOM</small></a><nav class="nav-links" id="navLinks"><a href="#kategori">Kategori</a><a href="#katalog">Katalog</a><a href="#harga">Daftar Harga</a><a href="#kontak">Kontak</a></nav><a class="nav-action" href="#katalog">JELAJAHI KATALOG <span class="material-symbols-outlined">north_east</span></a><button class="menu" id="menu" aria-label="Buka navigasi" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button></div></header>
 <main>
-<section class="hero"><div class="wrap hero-layout"><div class="hero-copy"><div class="eyebrow hero-kicker">LUKI FURNITURE · FURNITURE CUSTOM</div><h1>Kitchen set &<br><em>interior custom.</em></h1><p>Dibuat sesuai ukuran ruang, kebutuhan, dan pilihan material Anda.</p><div class="hero-actions"><a class="button" href="#katalog">Lihat produk <span class="material-symbols-outlined">arrow_forward</span></a><a class="text-link" href="#harga">Daftar harga</a></div></div></div></section>
-<section class="catalog" id="katalog"><div class="wrap"><div class="section-head"><div><div class="eyebrow">KATALOG PRODUK</div><h2 class="section-title">Pilih furniture untuk ruang Anda.</h2></div><p>Cari produk berdasarkan nama atau kategori.</p></div><div class="catalog-tools"><label class="searchbox"><span class="material-symbols-outlined">search</span><input id="productSearch" type="search" placeholder="Cari produk..." aria-label="Cari produk"></label><select id="categoryFilter" aria-label="Filter kategori"><option value="">Semua kategori</option></select></div><div class="product-grid" id="productGrid"><div class="catalog-state">Memuat katalog produk...</div></div></div></section>
-<section class="pricing" id="harga"><div class="wrap"><div class="section-head"><div><div class="eyebrow">INFORMASI HARGA</div><h2 class="section-title">Daftar harga<br><em>dan spesifikasi.</em></h2></div><p>Pilih jenis furniture untuk melihat harga dan spesifikasinya.</p></div><p class="price-intro">Harga per meter. Biaya akhir mengikuti ukuran dan desain.</p><div class="price-grid">
-<article class="price-card"><div class="price-top"><h3>Kitchen Set</h3><div class="price">Rp1.600.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>HPL Taco / Homega</li></ul><h4>Material finishing</h4><ul><li>Aksesori Carta / Taco</li><li>Engsel biasa</li><li>Rel biasa</li><li>Rak piring</li><li>Rak sendok</li><li>Rak bumbu</li></ul></div></details></article>
-<article class="price-card"><div class="price-top"><h3>Kitchen Set</h3><div class="price">Rp1.800.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>HPL Taco</li></ul><h4>Material finishing</h4><ul><li>Aksesori Lenaga / Taco</li><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li></ul></div></details></article>
-<article class="price-card"><div class="price-top"><h3>Lemari Custom HPL</h3><div class="price">Rp1.800.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>Finishing HPL Taco</li></ul><h4>Finishing</h4><ul><li>Engsel soft close</li><li>Rel double track</li><li>1 cermin</li><li>Kunci</li></ul></div></details></article>
-<article class="price-card"><div class="price-top"><h3>Kitchen Set Duco</h3><div class="price">Rp3.300.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Bahan dasar & proses finishing</h4><ul><li>Blokmin 18 mm</li><li>Sanpolac</li><li>Dempul</li><li>Epoxy</li><li>Finishing cat duco tahap 1</li><li>Finishing cat duco tahap 2</li></ul><h4>Kelengkapan</h4><ul><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li><li>Rak sampah</li><li>Gratis LED strip</li></ul></div></details></article>
-<article class="price-card"><div class="price-top"><h3>Kitchen Set Istimewa</h3><div class="price">Rp2.500.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Bahan dasar</h4><ul><li>PVC board 18 mm</li><li>HPL Taco</li></ul><h4>Material finishing</h4><ul><li>Aksesori Lenaga / Taco</li><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring stainless + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li><li>Gratis LED strip</li></ul></div></details></article>
-<article class="price-card"><div class="price-top"><h3>Kitchen Set + Top Table Granit</h3><div class="price">Rp2.500.000<span class="unit">/ meter · area bawah</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>HPL Taco</li></ul><h4>Finishing & kelengkapan</h4><ul><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li></ul></div></details></article>
-<article class="price-card"><div class="price-top"><h3>Backsplash / Keramik Dinding</h3><div class="price">Rp700.000–950.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Pilihan material</h4><ul><li>Mosaic — Rp950.000 / meter</li><li>Keramik / granit — Rp700.000 / meter</li></ul></div></details></article>
-<article class="price-card"><div class="price-top"><h3>Backdrop TV</h3><div class="price">Mulai Rp1.600.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Pilihan model</h4><ul><li>Minimalis — Rp1.600.000 / meter</li><li>Semi kabinet — Rp1.700.000 / meter</li><li>Full kabinet — Rp1.900.000 / meter</li></ul></div></details></article>
-<article class="price-card full"><div class="price-top"><h3>Partisi / Sekatan Ruangan</h3><div class="price">Mulai Rp1.600.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Pilihan model</h4><ul><li>Kisi — Rp1.600.000 / meter</li><li>Kabinet — Rp1.800.000 / meter</li><li>2 muka — Rp2.200.000 / meter</li></ul></div></details></article>
-</div><p class="price-note">Harga mengikuti daftar dari pemilik dan dihitung per meter sesuai jenis layanan. Ukuran, desain, serta detail kebutuhan proyek perlu dikonsultasikan terlebih dahulu.</p></div></section>
-<section class="contact" id="kontak"><div class="wrap contact-inner"><div><div class="eyebrow">KONSULTASI</div><h2>Butuh furniture custom?</h2><p>Diskusikan ukuran, model, dan kebutuhan furniture bersama Luki Furniture.</p></div><a class="button" href="#harga">Lihat harga <span class="material-symbols-outlined">north_east</span></a></div></section>
+<section class="hero"><div class="wrap"><div class="hero-panel"><div class="hero-content"><div class="eyebrow">FURNITURE CUSTOM · LUKI FURNITURE</div><h1>Ruang nyaman,<br><span>dibuat untuk Anda.</span></h1><p>Kitchen set dan interior custom yang dirancang mengikuti ukuran ruang, kebutuhan, dan pilihan material Anda.</p><div class="hero-actions"><a class="btn" href="#katalog">Jelajahi produk <span class="material-symbols-outlined">arrow_forward</span></a><a class="hero-link" href="#harga">Lihat daftar harga</a></div></div><div class="hero-index">CUSTOM MADE · KARAWANG</div></div></div></section>
+<section class="categories" id="kategori"><div class="wrap"><div class="section-head"><div><div class="eyebrow">JELAJAHI KATEGORI</div><h2 class="section-title">Solusi untuk setiap ruang.</h2></div><p class="section-desc">Pilih kategori furniture sesuai kebutuhan rumah dan ruang Anda.</p></div><div class="category-grid"><a class="category-card" href="#katalog"><span class="category-number">01 / DAPUR</span><strong>Kitchen Set</strong><span>Ruang dapur lebih tertata ↗</span></a><a class="category-card" href="#katalog"><span class="category-number">02 / PENYIMPANAN</span><strong>Lemari & Wardrobe</strong><span>Penyimpanan sesuai ruang ↗</span></a><a class="category-card" href="#katalog"><span class="category-number">03 / RUANG KELUARGA</span><strong>Backdrop TV</strong><span>Area hiburan lebih rapi ↗</span></a><a class="category-card" href="#katalog"><span class="category-number">04 / PEMBAGI RUANG</span><strong>Partisi Ruangan</strong><span>Fungsi dan estetika ↗</span></a></div></div></section>
+<section class="section catalog" id="katalog"><div class="wrap"><div class="section-head"><div><div class="eyebrow">KATALOG LUKI FURNITURE</div><h2 class="section-title">Temukan yang Anda butuhkan.</h2></div><p class="section-desc">Lihat pilihan produk dan detailnya. Gunakan pencarian untuk menemukan produk lebih cepat.</p></div><div class="catalog-tools"><label class="searchbox"><span class="material-symbols-outlined">search</span><input id="productSearch" type="search" placeholder="Cari produk..." aria-label="Cari produk"></label><select id="categoryFilter" aria-label="Filter kategori"><option value="">Semua kategori</option></select></div><div class="product-grid" id="productGrid"><div class="catalog-state">Memuat katalog produk...</div></div></div></section>
+<section class="section pricing" id="harga"><div class="wrap"><div class="section-head"><div><div class="eyebrow">DAFTAR HARGA</div><h2 class="section-title">Pilihan material,<br>pilihan anggaran.</h2></div><p class="section-desc">Informasi harga awal untuk membantu Anda merencanakan kebutuhan interior.</p></div><p class="price-intro">Harga dihitung per meter. Klik spesifikasi untuk melihat detail bahan dan kelengkapan.</p><div class="price-grid">
+<article class="price-card"><div class="price-top"><h3>Kitchen Set</h3><div class="price">Rp1.600.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>HPL Taco / Homega</li></ul><h4>Kelengkapan</h4><ul><li>Aksesori Carta / Taco</li><li>Engsel biasa</li><li>Rel biasa</li><li>Rak piring</li><li>Rak sendok</li><li>Rak bumbu</li></ul></details></article>
+<article class="price-card"><div class="price-top"><h3>Kitchen Set</h3><div class="price">Rp1.800.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>HPL Taco</li></ul><h4>Kelengkapan</h4><ul><li>Aksesori Lenaga / Taco</li><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li></ul></details></article>
+<article class="price-card"><div class="price-top"><h3>Lemari Custom HPL</h3><div class="price">Rp1.800.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>Finishing HPL Taco</li></ul><h4>Kelengkapan</h4><ul><li>Engsel soft close</li><li>Rel double track</li><li>1 cermin</li><li>Kunci</li></ul></details></article>
+<article class="price-card"><div class="price-top"><h3>Kitchen Set Duco</h3><div class="price">Rp3.300.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><h4>Bahan & proses finishing</h4><ul><li>Blokmin 18 mm</li><li>Sanpolac</li><li>Dempul</li><li>Epoxy</li><li>Finishing cat duco tahap 1</li><li>Finishing cat duco tahap 2</li></ul><h4>Kelengkapan</h4><ul><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li><li>Rak sampah</li><li>Gratis LED strip</li></ul></details></article>
+<article class="price-card"><div class="price-top"><h3>Kitchen Set Istimewa</h3><div class="price">Rp2.500.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><h4>Bahan dasar</h4><ul><li>PVC board 18 mm</li><li>HPL Taco</li></ul><h4>Kelengkapan</h4><ul><li>Aksesori Lenaga / Taco</li><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring stainless + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li><li>Gratis LED strip</li></ul></details></article>
+<article class="price-card"><div class="price-top"><h3>Kitchen Set + Top Table Granit</h3><div class="price">Rp2.500.000<span class="unit">/ meter · area bawah</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>HPL Taco</li></ul><h4>Kelengkapan</h4><ul><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li></ul></details></article>
+<article class="price-card"><div class="price-top"><h3>Backsplash / Keramik Dinding</h3><div class="price">Rp700.000–950.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat pilihan material <span class="material-symbols-outlined">expand_more</span></summary><h4>Pilihan material</h4><ul><li>Mosaic — Rp950.000 / meter</li><li>Keramik / granit — Rp700.000 / meter</li></ul></details></article>
+<article class="price-card"><div class="price-top"><h3>Backdrop TV</h3><div class="price">Mulai Rp1.600.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat pilihan model <span class="material-symbols-outlined">expand_more</span></summary><h4>Pilihan model</h4><ul><li>Minimalis — Rp1.600.000 / meter</li><li>Semi kabinet — Rp1.700.000 / meter</li><li>Full kabinet — Rp1.900.000 / meter</li></ul></details></article>
+<article class="price-card full"><div class="price-top"><h3>Partisi / Sekatan Ruangan</h3><div class="price">Mulai Rp1.600.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat pilihan model <span class="material-symbols-outlined">expand_more</span></summary><h4>Pilihan model</h4><ul><li>Kisi — Rp1.600.000 / meter</li><li>Kabinet — Rp1.800.000 / meter</li><li>2 muka — Rp2.200.000 / meter</li></ul></details></article>
+</div><p class="price-note">Harga mengikuti jenis layanan dan ukuran. Desain, material, serta detail kebutuhan proyek perlu dikonsultasikan terlebih dahulu.</p></div></section>
+<section class="contact" id="kontak"><div class="wrap contact-inner"><div><div class="eyebrow">MULAI RENCANAKAN RUANG ANDA</div><h2>Ada rencana furniture custom?</h2><p>Diskusikan ukuran, model, dan kebutuhan interior Anda bersama Luki Furniture.</p></div><a class="btn" href="https://wa.me/?text=Halo%20Luki%20Furniture%2C%20saya%20ingin%20konsultasi%20furniture%20custom.">Konsultasi WhatsApp <span class="material-symbols-outlined">north_east</span></a></div></section>
 </main>
-<footer class="footer"><div class="wrap"><div class="footer-top"><div><a class="brand" href="#">LUKI<small>FURNITURE CUSTOM</small></a><p>Kitchen set dan interior custom sesuai kebutuhan ruang Anda.</p></div><div class="footer-links"><a href="#katalog">Katalog</a><a href="#harga">Daftar harga</a><a href="#kontak">Kontak</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Luki Furniture</span><span>Kitchen Set & Interior Custom</span></div></div></footer>
+<footer class="footer"><div class="wrap"><div class="footer-top"><div><a class="brand" href="#">LUKI<small>FURNITURE CUSTOM</small></a><p>Kitchen set dan interior custom sesuai kebutuhan ruang Anda.</p></div><div class="footer-links"><a href="#kategori">Kategori</a><a href="#katalog">Katalog</a><a href="#harga">Daftar harga</a><a href="#kontak">Kontak</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Luki Furniture</span><span>Kitchen Set & Interior Custom</span></div></div></footer>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 const menu=document.getElementById('menu'),links=document.getElementById('navLinks');
@@ -509,7 +57,8 @@ const grid=document.getElementById('productGrid'),search=document.getElementById
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const money=v=>v==null?'Hubungi kami':new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(v);
 function render(){const q=search.value.toLowerCase(),cat=filter.value;const rows=products.filter(p=>(!cat||p.category_id===cat)&&(!q||p.name.toLowerCase().includes(q)||(p.short_description||'').toLowerCase().includes(q)));if(!rows.length){grid.innerHTML='<div class="catalog-state">Produk belum tersedia atau tidak ditemukan.</div>';return}grid.innerHTML=rows.map(p=>'<article class="product-card"><div class="product-photo">'+(p.cover_image?'<img loading="lazy" src="'+esc(p.cover_image)+'" alt="'+esc(p.name)+'">':'<div class="product-placeholder" aria-label="Foto belum tersedia"><span class="material-symbols-outlined">chair</span></div>')+'</div><div class="product-meta"><h3>'+esc(p.name)+'</h3><p>'+esc(p.short_description||p.description||'Produk Luki Furniture')+'</p><div class="product-price">'+money(p.discount_price??p.price)+'</div></div><div class="product-foot"><span>'+esc(p.material||'Luki Furniture')+'</span><button data-id="'+esc(p.id)+'">Detail ↗</button></div></article>').join('');grid.querySelectorAll('[data-id]').forEach(b=>b.addEventListener('click',()=>{const p=products.find(x=>x.id===b.dataset.id);if(p)alert([p.name,p.description||p.short_description||'',p.material?'Material: '+p.material:'',p.dimensions?'Ukuran: '+p.dimensions:'','Harga: '+money(p.discount_price??p.price)].filter(Boolean).join('\n\n'))}))}
-async function load(){try{if(!window.supabase){throw new Error('Supabase client unavailable')}const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);const [pr,cr]=await Promise.all([db.from('products').select('id,name,slug,short_description,description,price,discount_price,material,dimensions,category_id,cover_image,categories(name)').eq('is_active',true).order('created_at',{ascending:false}),db.from('categories').select('id,name')]);if(pr.error)throw pr.error;products=pr.data||[];if(!cr.error){filter.innerHTML='<option value="">Semua kategori</option>'+(cr.data||[]).map(c=>'<option value="'+esc(c.id)+'">'+esc(c.name)+'</option>').join('')}render()}catch(e){grid.innerHTML='<div class="catalog-state">Katalog produk sedang belum tersedia. Silakan hubungi Luki Furniture untuk informasi layanan.</div>';console.error(e)}}
+async function load(){try{if(!window.supabase)throw new Error('Supabase client unavailable');const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);const [pr,cr]=await Promise.all([db.from('products').select('id,name,slug,short_description,description,price,discount_price,material,dimensions,category_id,cover_image,categories(name)').eq('is_active',true).order('created_at',{ascending:false}),db.from('categories').select('id,name')]);if(pr.error)throw pr.error;products=pr.data||[];if(!cr.error)filter.innerHTML='<option value="">Semua kategori</option>'+(cr.data||[]).map(c=>'<option value="'+esc(c.id)+'">'+esc(c.name)+'</option>').join('');render()}catch(e){grid.innerHTML='<div class="catalog-state">Katalog produk sedang belum tersedia. Silakan hubungi Luki Furniture untuk informasi layanan.</div>';console.error(e)}}
 search.addEventListener('input',render);filter.addEventListener('change',render);load();
 </script>
-</body></html>
+</body>
+</html>
