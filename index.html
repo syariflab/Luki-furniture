@@ -24,17 +24,104 @@
 @media(max-width:650px){.wrap{width:calc(100% - 36px)}.topline{height:29px;font-size:7px;letter-spacing:1.5px}.header{height:68px}.brand{font-size:19px}.links{display:none;position:absolute;top:68px;left:0;right:0;padding:23px 22px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;gap:21px}.links.open{display:flex}.nav-cta{display:none}.menu{display:block}.hero{padding:12px 0 60px}.hero-layout{display:flex;flex-direction:column-reverse;min-height:0}.hero-image{height:390px;min-height:0}.image-stamp{right:12px;bottom:12px;padding:12px 14px;min-width:125px}.image-stamp b{font-size:16px}.hero-copy{padding:30px 0 0}.hero h1{font-size:clamp(49px,13vw,66px);letter-spacing:-3.5px;margin:18px 0 14px}.hero-copy>p{font-size:11px;line-height:1.9;margin-bottom:22px}.hero-actions{gap:17px}.hero-caption{margin-top:25px;font-size:8px}.intro{grid-template-columns:1fr;gap:17px;padding-bottom:65px}.intro h2,.section-title{font-size:36px;letter-spacing:-1.8px}.intro p{font-size:11px}.projects{padding:64px 0}.section-head{display:block;margin-bottom:25px}.section-head>p{margin-top:13px}.project-grid{grid-template-columns:1fr;gap:12px}.project-large{height:420px}.project-stack{grid-template-columns:1fr 1fr;grid-template-rows:none;gap:12px}.project-small{height:225px}.project-overlay{padding:55px 13px 15px}.project-overlay h3{font-size:17px}.project-small .project-overlay h3{font-size:14px}.project-overlay span{font-size:7px}.services{padding:66px 0}.service-top{display:block}.service-top>p{margin-top:12px}.service-grid{grid-template-columns:1fr;margin-top:25px}.service,.service+.service{padding:21px 0;border-left:0;border-bottom:1px solid var(--line)}.service:last-child{border-bottom:0}.service h3{margin:10px 0 6px}.pricing{padding:67px 0}.price-grid{grid-template-columns:1fr;gap:10px}.price-card,.price-card.full{grid-column:auto;padding:21px 18px}.price-card h3{font-size:16px}.price-card ul,.price-card.full ul{grid-template-columns:1fr 1fr}.price-card li{font-size:9px}.price-top{gap:8px}.price{font-size:11px}.price-intro{font-size:11px}.catalog{padding:65px 0}.catalog-tools{display:grid;grid-template-columns:1fr}.catalog-tools select{height:46px}.product-grid{grid-template-columns:1fr 1fr;gap:9px}.product-photo{height:175px}.product-meta{padding:12px 6px}.product-meta h3{font-size:14px}.product-meta p{font-size:9px}.product-foot{padding:10px 6px}.about{padding:68px 0}.about-grid{grid-template-columns:1fr;gap:35px}.about-image{height:390px;margin-right:12px}.about-copy h2{font-size:39px}.contact{padding:54px 0}.contact-inner{display:block}.contact h2{font-size:38px}.contact .button{margin-top:23px}.footer-top{display:block}.footer-links{margin-top:22px;flex-wrap:wrap;gap:17px}.footer-bottom{flex-direction:column;gap:8px}}
 @media(max-width:370px){.product-photo{height:145px}.price-card ul,.price-card.full ul{grid-template-columns:1fr}.hero-image{height:340px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* LUKI SIGNATURE LUXURY ART DIRECTION */
+:root{--paper:#171914;--white:#f2eee5;--ink:#eee9df;--muted:#aaa89d;--line:#45463d;--forest:#11140f;--olive:#b59a70;--copper:#c6a879}
+body{background:#171914;color:#eee9df}
+.topline{background:#0e100d;color:#d8d0c0;letter-spacing:2.6px}
+.header{background:rgba(23,25,20,.94);border-bottom:1px solid rgba(198,168,121,.2)}
+.brand{color:#f1ebdf}.brand small{color:#a9a394}
+.links{color:#c8c2b5}.links a:hover{color:#d3b98c}
+.nav-note{color:#aaa496}.nav-cta,.button{background:#b79a6d;border-color:#b79a6d;color:#171914}
+.nav-cta:hover,.button:hover{background:#d0b78d;border-color:#d0b78d;color:#171914}
+.menu{color:#f1ebdf}
+.hero{padding-top:0;padding-bottom:90px}
+.hero-layout{grid-template-columns:.78fr 1.22fr;min-height:690px}
+.hero-copy{padding:72px 9% 60px 0}
+.hero h1{font-size:clamp(55px,6.3vw,91px);letter-spacing:-5px;color:#f2eee5}
+.hero h1 em{color:#c7a879}
+.hero-copy>p{color:#b8b5aa}
+.hero-caption{color:#9d9b90}
+.hero-kicker:before{background:#c7a879}
+.hero-image{min-height:650px}
+.image-stamp{background:#b79a6d;color:#171914}
+.image-stamp span{color:#38392f}
+.intro{padding-top:8px}
+.intro h2,.section-title{color:#f0ece3}
+.intro p,.section-head>p,.service-top>p{color:#aaa89d}
+.projects{background:#20231d}
+.projects .section-title{color:#f0ece3}
+.projects .section-head>p{color:#aaa89d}
+.project-large,.project-small{background:#303329}
+.project-overlay{background:linear-gradient(transparent,rgba(8,10,8,.88))}
+.project-overlay span{color:#d7bd94}
+.services{background:#eeeae0;color:#24261f}
+.services .section-title{color:#252820}
+.services .eyebrow{color:#92744e}
+.services .service-top>p{color:#686b61}
+.service-grid{border-color:#c9c4b8}
+.service+.service{border-color:#c9c4b8}
+.service .num{color:#92744e}
+.service p{color:#6e7067}
+.pricing{background:#171914;color:#f1ede4}
+.pricing .section-title{color:#f1ede4}
+.pricing .price-intro,.pricing .section-head>p,.pricing .price-note{color:#aaa89d}
+.price-card{background:#eeeadf;border-color:#d8d0c1;color:#252820}
+.price-card h3{color:#252820}
+.price{color:#6b684d}
+.price-card h4{color:#96764e}
+.price-card li{color:#66675e}
+.price-card li:before{background:#ad8b5b}
+.catalog{background:#e7e3d9;color:#24261f}
+.catalog .section-title{color:#24261f}
+.catalog .section-head>p{color:#696b62}
+.searchbox,.catalog-tools select{background:#f8f6f0;border-color:#d0cabc}
+.product-card{background:#f8f6f0}
+.product-meta h3{color:#252820}
+.product-meta p,.product-foot{color:#707168}
+.product-price{color:#6f7053}
+.about{background:#171914;color:#f0ece3}
+.about-copy h2{color:#f0ece3}
+.about-copy>p{color:#aaa89d}
+.about-detail{border-color:#45463d}
+.about-detail strong{color:#f0ece3}
+.about-detail small{color:#aaa89d}
+.about-detail .material-symbols-outlined{color:#c6a879}
+.about-image:after{border-color:#b79a6d}
+.contact{background:#b79a6d;color:#171914}
+.contact .eyebrow{color:#514532}
+.contact h2{color:#171914}
+.contact p{color:#39392f}
+.contact .button{background:#171914;border-color:#171914;color:#f2eee5}
+.contact .button:hover{background:#30372c;border-color:#30372c}
+.footer{background:#0e100d;color:#f1ede4}
+.footer p,.footer-bottom{color:#a5a397}
+.footer-links{color:#d8d1c3}
+.footer-bottom{border-color:#3b3c34}
+@media(max-width:650px){
+ .hero{padding-top:0;padding-bottom:58px}
+ .hero-layout{flex-direction:column-reverse}
+ .hero-image{height:390px;min-height:0}
+ .hero-copy{padding:29px 0 0}
+ .hero h1{font-size:clamp(48px,13vw,65px);letter-spacing:-3.3px}
+ .links{background:#171914;border-color:#45463d;color:#e7e0d3}
+ .project-stack{grid-template-columns:1fr 1fr}
+ .services{padding:66px 0}
+ .services .service-grid{border-color:#c9c4b8}
+ .price-card{background:#eeeadf}
+ .contact{padding:54px 0}
+}
 </style>
 </head>
 <body>
 <div class="topline">Luki Furniture <span style="color:#c9a989;padding:0 9px">·</span> Custom Kitchen & Interior</div>
 <header class="header"><div class="wrap nav"><a class="brand" href="#">LUKI<small>KITCHEN & INTERIOR</small></a><nav class="links" id="navLinks"><a href="#projects">Portofolio</a><a href="#layanan">Layanan</a><a href="#harga">Daftar Harga</a><a href="#katalog">Katalog</a><a href="#tentang">Tentang</a></nav><div class="nav-end"><span class="nav-note">Interior made personal</span><a class="nav-cta" href="#kontak">Mulai konsultasi <span class="material-symbols-outlined">north_east</span></a><button class="menu" id="menu" aria-label="Buka navigasi" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button></div></div></header>
 <main>
-<section class="hero"><div class="wrap hero-layout"><div class="hero-copy"><div class="eyebrow hero-kicker">Custom kitchen · Interior</div><h1>Ruang yang<br><em>punya cerita.</em></h1><p>Kami membantu menghadirkan kitchen set dan interior custom yang menyatukan keindahan, fungsi, dan karakter rumah Anda.</p><div class="hero-actions"><a class="button" href="#projects">Lihat portofolio <span class="material-symbols-outlined">arrow_forward</span></a><a class="text-link" href="#harga">Lihat daftar harga</a></div><div class="hero-caption">Designed around the way you live · Luki Furniture</div></div><div class="hero-image"><img src="aset/IMG-20261115-WA0024.jpg" alt="Kitchen set abu-abu dengan aksen marmer karya referensi Luki Furniture"><div class="image-stamp"><b>01 / 03</b><span>SELECTED KITCHEN</span></div></div></div></section>
+<section class="hero"><div class="wrap hero-layout"><div class="hero-copy"><div class="eyebrow hero-kicker">Custom kitchen · Interior</div><h1>Dibuat untuk<br><em>ruang istimewa.</em></h1><p>Kitchen set dan interior custom dengan perhatian pada proporsi, material, dan detail — dirancang untuk menghadirkan karakter istimewa pada rumah Anda.</p><div class="hero-actions"><a class="button" href="#projects">Lihat portofolio <span class="material-symbols-outlined">arrow_forward</span></a><a class="text-link" href="#harga">Lihat daftar harga</a></div><div class="hero-caption">THE ART OF LIVING · LUKI FURNITURE</div></div><div class="hero-image"><img src="aset/IMG-20261115-WA0024.jpg" alt="Kitchen set abu-abu dengan aksen marmer karya referensi Luki Furniture"><div class="image-stamp"><b>01 / 03</b><span>SELECTED KITCHEN</span></div></div></div></section>
 <section class="intro wrap"><div><div class="eyebrow">Luki Furniture Studio</div><h2>Bukan hanya mengisi ruang. Membuatnya terasa lebih berarti.</h2></div><p>Setiap rumah memiliki kebutuhan dan karakter yang berbeda. Karena itu, pilihan desain, material, dan penyimpanan perlu disesuaikan dengan ruang serta kebiasaan penggunanya.</p></section>
-<section class="projects" id="projects"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Selected inspiration</div><h2 class="section-title">Tiga karakter.<br>Satu ruang yang personal.</h2></div><p>Jelajahi inspirasi kitchen set dengan nuansa natural, lembut, hingga modern. Foto yang ditampilkan merupakan dokumentasi pilihan Luki Furniture.</p></div><div class="project-grid"><article class="project-large"><img src="aset/IMG-20261115-WA0022.jpg" alt="Kitchen set kayu bernuansa natural dengan pencahayaan hangat"><div class="project-overlay"><span>01 · Warm natural</span><h3>Hangat dalam sentuhan natural.</h3></div></article><div class="project-stack"><article class="project-small"><img src="aset/IMG-20261115-WA0023.jpg" alt="Kitchen set warna pink dengan island"><div class="project-overlay"><span>02 · Soft contemporary</span><h3>Lembut dan berkarakter.</h3></div></article><article class="project-small"><img src="aset/IMG-20261115-WA0024.jpg" alt="Kitchen set abu-abu dengan aksen marmer"><div class="project-overlay"><span>03 · Modern marble</span><h3>Bersih, modern, elegan.</h3></div></article></div></div></div></section>
+<section class="projects" id="projects"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Selected inspiration</div><h2 class="section-title">Detail yang indah.<br>Karakter yang abadi.</h2></div><p>Jelajahi inspirasi kitchen set dengan nuansa natural, lembut, hingga modern. Foto yang ditampilkan merupakan dokumentasi pilihan Luki Furniture.</p></div><div class="project-grid"><article class="project-large"><img src="aset/IMG-20261115-WA0022.jpg" alt="Kitchen set kayu bernuansa natural dengan pencahayaan hangat"><div class="project-overlay"><span>01 · Warm natural</span><h3>Hangat dalam sentuhan natural.</h3></div></article><div class="project-stack"><article class="project-small"><img src="aset/IMG-20261115-WA0023.jpg" alt="Kitchen set warna pink dengan island"><div class="project-overlay"><span>02 · Soft contemporary</span><h3>Lembut dan berkarakter.</h3></div></article><article class="project-small"><img src="aset/IMG-20261115-WA0024.jpg" alt="Kitchen set abu-abu dengan aksen marmer"><div class="project-overlay"><span>03 · Modern marble</span><h3>Bersih, modern, elegan.</h3></div></article></div></div></div></section>
 <section class="services" id="layanan"><div class="wrap"><div class="service-top"><div><div class="eyebrow">What matters to us</div><h2 class="section-title">Dirancang dengan<br>tujuan yang jelas.</h2></div><p>Desain yang baik bukan hanya menarik dilihat. Ia juga harus menjawab kebutuhan ruang dan membuat kegiatan sehari-hari lebih nyaman.</p></div><div class="service-grid"><article class="service"><span class="num">01 / PERSONAL</span><h3>Berangkat dari kebutuhan</h3><p>Gaya, warna, dan komposisi disesuaikan dengan karakter rumah serta kebutuhan penghuninya.</p></article><article class="service"><span class="num">02 / FUNCTIONAL</span><h3>Fungsi yang diperhatikan</h3><p>Area kerja dan penyimpanan dipertimbangkan agar ruang terasa lebih praktis dan tertata.</p></article><article class="service"><span class="num">03 / DETAILS</span><h3>Detail yang menyatu</h3><p>Pilihan material, finishing, dan aksen membentuk tampilan interior yang selaras.</p></article></div></div></section>
-<section class="pricing" id="harga"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Price guide · Luki Furniture</div><h2 class="section-title">Layanan dan pilihan<br>spesifikasi.</h2></div><p>Informasi harga per meter dan kelengkapan berdasarkan daftar dari pemilik Luki Furniture.</p></div><p class="price-intro">Setiap pilihan memiliki spesifikasi material dan aksesori tersendiri. Silakan jadikan daftar ini sebagai panduan awal sebelum mendiskusikan ukuran dan kebutuhan proyek.</p><div class="price-grid">
+<section class="pricing" id="harga"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Price guide · Luki Furniture</div><h2 class="section-title">Material pilihan.<br>Standar yang jelas.</h2></div><p>Informasi harga per meter dan kelengkapan berdasarkan daftar dari pemilik Luki Furniture.</p></div><p class="price-intro">Setiap pilihan memiliki spesifikasi material dan aksesori tersendiri. Silakan jadikan daftar ini sebagai panduan awal sebelum mendiskusikan ukuran dan kebutuhan proyek.</p><div class="price-grid">
 <article class="price-card"><div class="price-top"><h3>Kitchen Set</h3><div class="price">Rp1.600.000<span class="unit">/ meter</span></div></div><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>HPL Taco / Homega</li></ul><h4>Material finishing</h4><ul><li>Aksesori Carta / Taco</li><li>Engsel biasa</li><li>Rel biasa</li><li>Rak piring</li><li>Rak sendok</li><li>Rak bumbu</li></ul></article>
 <article class="price-card"><div class="price-top"><h3>Kitchen Set</h3><div class="price">Rp1.800.000<span class="unit">/ meter</span></div></div><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>HPL Taco</li></ul><h4>Material finishing</h4><ul><li>Aksesori Lenaga / Taco</li><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li></ul></article>
 <article class="price-card"><div class="price-top"><h3>Lemari Custom HPL</h3><div class="price">Rp1.800.000<span class="unit">/ meter</span></div></div><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>Finishing HPL Taco</li></ul><h4>Finishing</h4><ul><li>Engsel soft close</li><li>Rel double track</li><li>1 cermin</li><li>Kunci</li></ul></article>
@@ -46,7 +133,7 @@
 <article class="price-card full"><div class="price-top"><h3>Partisi / Sekatan Ruangan</h3><div class="price">Mulai Rp1.600.000<span class="unit">/ meter</span></div></div><h4>Pilihan model</h4><ul><li>Kisi — Rp1.600.000 / meter</li><li>Kabinet — Rp1.800.000 / meter</li><li>2 muka — Rp2.200.000 / meter</li></ul></article>
 </div><p class="price-note">Harga mengikuti daftar dari pemilik dan dihitung per meter sesuai jenis layanan. Ukuran, desain, serta detail kebutuhan proyek perlu dikonsultasikan terlebih dahulu.</p></div></section>
 <section class="catalog" id="katalog"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Product catalogue</div><h2 class="section-title">Katalog pilihan Luki.</h2></div><p>Produk yang tersedia akan ditampilkan di sini. Gunakan pencarian untuk menemukan pilihan yang dibutuhkan.</p></div><div class="catalog-tools"><label class="searchbox"><span class="material-symbols-outlined">search</span><input id="productSearch" type="search" placeholder="Cari produk..." aria-label="Cari produk"></label><select id="categoryFilter" aria-label="Filter kategori"><option value="">Semua kategori</option></select></div><div class="product-grid" id="productGrid"><div class="catalog-state">Memuat katalog produk...</div></div></div></section>
-<section class="about" id="tentang"><div class="wrap about-grid"><div class="about-image"><img src="aset/IMG-20261115-WA0023.jpg" alt="Inspirasi kitchen set pink dengan island"></div><div class="about-copy"><div class="eyebrow">A little about Luki</div><h2>Ruang terbaik dimulai dari percakapan.</h2><p>Luki Furniture menghadirkan layanan kitchen set dan interior custom dengan pilihan desain serta spesifikasi yang dapat disesuaikan dengan kebutuhan ruang Anda. Mulai dari dapur, lemari, backdrop TV, hingga partisi ruangan.</p><div class="about-detail"><span class="material-symbols-outlined">architecture</span><div><strong>Ceritakan kebutuhan ruang Anda.</strong><small>Diskusikan ide, ukuran, dan pilihan layanan bersama Luki Furniture.</small></div></div></div></div></section>
+<section class="about" id="tentang"><div class="wrap about-grid"><div class="about-image"><img src="aset/IMG-20261115-WA0023.jpg" alt="Inspirasi kitchen set pink dengan island"></div><div class="about-copy"><div class="eyebrow">A little about Luki</div><h2>Kemewahan dimulai dari detail.</h2><p>Luki Furniture menghadirkan layanan kitchen set dan interior custom dengan pilihan desain serta spesifikasi yang dapat disesuaikan dengan kebutuhan ruang Anda. Mulai dari dapur, lemari, backdrop TV, hingga partisi ruangan.</p><div class="about-detail"><span class="material-symbols-outlined">architecture</span><div><strong>Ceritakan kebutuhan ruang Anda.</strong><small>Diskusikan ide, ukuran, dan pilihan layanan bersama Luki Furniture.</small></div></div></div></div></section>
 <section class="contact" id="kontak"><div class="wrap contact-inner"><div><div class="eyebrow">Start a conversation</div><h2>Ada ruang yang ingin Anda ubah?</h2><p>Lihat pilihan layanan dan spesifikasi, lalu siapkan detail kebutuhan ruang untuk memulai konsultasi dengan Luki Furniture.</p></div><a class="button" href="#harga">Lihat layanan & harga <span class="material-symbols-outlined">north_east</span></a></div></section>
 </main>
 <footer class="footer"><div class="wrap"><div class="footer-top"><div><a class="brand" href="#">LUKI<small>KITCHEN & INTERIOR</small></a><p>Kitchen set dan interior custom yang dirancang mengikuti karakter dan kebutuhan ruang Anda.</p></div><div class="footer-links"><a href="#projects">Portofolio</a><a href="#layanan">Layanan</a><a href="#harga">Daftar harga</a><a href="#kontak">Kontak</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Luki Furniture</span><span>Custom Kitchen & Interior</span></div></div></footer>
