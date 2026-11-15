@@ -57,9 +57,12 @@ create index if not exists products_created_at_idx on public.products(created_at
 create index if not exists product_images_product_sort_idx on public.product_images(product_id, sort_order);
 
 create or replace function public.set_updated_at()
-returns trigger language plpgsql as $$
+returns trigger
+language plpgsql
+set search_path = ''
+as $
 begin
-  new.updated_at = now();
+  new.updated_at = pg_catalog.now();
   return new;
 end;
 $$;
@@ -73,6 +76,9 @@ alter table public.categories enable row level security;
 alter table public.products enable row level security;
 alter table public.product_images enable row level security;
 alter table public.site_settings enable row level security;
+
+grant usage on schema public to anon, authenticated;
+grant select on public.categories, public.products, public.product_images, public.site_settings to anon, authenticated;
 
 drop policy if exists "Public can read active categories" on public.categories;
 create policy "Public can read active categories"
