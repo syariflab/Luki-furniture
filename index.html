@@ -398,24 +398,102 @@ h1,h2,h3,.brand,.image-stamp b{font-family:var(--serif)}
  .hero-copy>p{font-size:12px}
 }
 
+
+/* MOBILE-FIRST READABILITY REFINEMENT */
+.hero-layout{grid-template-columns:minmax(0,1fr);min-height:0}
+.hero-copy{max-width:720px}
+.hero h1{max-width:760px}
+.catalog .section-title{max-width:620px}
+.catalog .section-head>p{max-width:390px}
+.price-details{margin-top:14px;border-top:1px solid var(--line)}
+.price-details summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:13px 0 2px;color:var(--olive);font-size:11px;font-weight:700;cursor:pointer}
+.price-details summary::-webkit-details-marker{display:none}
+.price-details summary .material-symbols-outlined{transition:transform .2s}
+.price-details[open] summary .material-symbols-outlined{transform:rotate(180deg)}
+.price-details-content{padding-top:5px}
+.price-card h4{margin-top:17px}
+@media(max-width:760px){
+ .wrap{width:calc(100% - 32px)}
+ .topline{font-size:7px;letter-spacing:1px}
+ .hero{padding:30px 0 38px}
+ .hero-layout{display:block}
+ .hero-copy{padding:0}
+ .hero h1{font-size:clamp(38px,10.5vw,50px);line-height:1.12;letter-spacing:-1.9px;margin:14px 0}
+ .hero-copy>p{font-size:14px;line-height:1.65;max-width:34ch;margin-bottom:20px}
+ .hero-actions{gap:14px}
+ .button{min-height:46px;padding:0 16px;font-size:11px}
+ .text-link{font-size:11px}
+ .catalog{padding:42px 0 48px}
+ .catalog .section-head{margin-bottom:18px}
+ .catalog .section-title{font-size:30px;line-height:1.2;letter-spacing:-1px;max-width:19ch}
+ .catalog .section-head>p{font-size:13px;line-height:1.6;margin-top:9px}
+ .catalog-tools{gap:8px;margin:20px 0 15px}
+ .searchbox,.catalog-tools select{min-height:48px;font-size:13px}
+ .searchbox input{font-size:13px}
+ .product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .product-card{min-width:0}
+ .product-photo{aspect-ratio:1/1;height:auto}
+ .product-meta{padding:12px 10px 9px}
+ .product-meta h3{font-size:13px;line-height:1.35;margin-bottom:5px}
+ .product-meta p{font-size:11px;line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+ .product-price{font-size:12px;margin-top:8px}
+ .product-foot{margin:0 10px;padding:10px 0 12px;font-size:10px;gap:6px}
+ .product-foot button{font-size:10px;white-space:nowrap}
+ .catalog-state{font-size:13px;line-height:1.6;padding:26px 16px}
+ .pricing{padding:46px 0}
+ .pricing .section-head{margin-bottom:12px}
+ .pricing .section-title{font-size:30px;line-height:1.2;letter-spacing:-1px}
+ .pricing .section-head>p{font-size:13px;line-height:1.6;margin-top:9px}
+ .price-intro{font-size:13px;line-height:1.65;margin:12px 0 18px}
+ .price-grid{grid-template-columns:minmax(0,1fr);gap:10px}
+ .price-card,.price-card.full{padding:17px 15px}
+ .price-top{align-items:center;gap:10px;padding-bottom:12px}
+ .price-card h3{font-size:14px;line-height:1.35}
+ .price{font-size:12px;line-height:1.3}
+ .unit{font-size:10px}
+ .price-details{margin-top:10px}
+ .price-details summary{font-size:12px;padding:11px 0 2px}
+ .price-card h4{font-size:10px;letter-spacing:1px;margin:15px 0 8px}
+ .price-card ul,.price-card.full ul{grid-template-columns:minmax(0,1fr);gap:6px}
+ .price-card li{font-size:12px;line-height:1.5;padding-left:14px}
+ .price-card li:before{top:7px}
+ .price-note{font-size:11px;line-height:1.65;margin-top:16px}
+ .contact{padding:38px 0}
+ .contact h2{font-size:29px;line-height:1.2;letter-spacing:-1px}
+ .contact p{font-size:13px;line-height:1.65}
+ .footer p{font-size:12px}
+ .footer-links{gap:18px}
+ .footer-links a{font-size:11px}
+ .footer-bottom{font-size:10px}
+}
+@media(max-width:380px){
+ .wrap{width:calc(100% - 28px)}
+ .product-grid{gap:8px}
+ .product-meta{padding:10px 8px 8px}
+ .product-meta h3{font-size:12px}
+ .product-meta p{font-size:10px}
+ .price-top{align-items:flex-start}
+ .price{font-size:11px}
+}
+
 </style>
 </head>
 <body>
 <div class="topline">LUKI FURNITURE <span style="color:#c9a989;padding:0 9px">·</span> KITCHEN SET & INTERIOR CUSTOM</div>
 <header class="header"><div class="wrap nav"><a class="brand" href="#">LUKI<small>FURNITURE CUSTOM</small></a><nav class="links" id="navLinks"><a href="#katalog">Katalog</a><a href="#harga">Daftar Harga</a><a href="#kontak">Kontak</a></nav><div class="nav-end"><a class="nav-cta" href="#katalog">Lihat katalog <span class="material-symbols-outlined">north_east</span></a><button class="menu" id="menu" aria-label="Buka navigasi" aria-expanded="false"><span class="material-symbols-outlined">menu</span></button></div></div></header>
 <main>
-<section class="hero"><div class="wrap hero-layout"><div class="hero-copy"><div class="eyebrow hero-kicker">LUKI FURNITURE · FURNITURE CUSTOM</div><h1>Furniture custom.<br><em>Dirancang untuk ruang Anda.</em></h1><p>Kitchen set dan interior custom yang dibuat sesuai kebutuhan, ukuran, dan karakter ruangan.</p><div class="hero-actions"><a class="button" href="#katalog">Jelajahi katalog <span class="material-symbols-outlined">arrow_forward</span></a><a class="text-link" href="#harga">Daftar harga</a></div></div></div></section>
-<section class="catalog" id="katalog"><div class="wrap"><div class="section-head"><div><div class="eyebrow">KATALOG PRODUK</div><h2 class="section-title">Temukan furniture untuk setiap ruang.</h2></div><p>Lihat pilihan produk Luki Furniture. Gunakan pencarian untuk menemukan model yang sesuai kebutuhan Anda.</p></div><div class="catalog-tools"><label class="searchbox"><span class="material-symbols-outlined">search</span><input id="productSearch" type="search" placeholder="Cari produk..." aria-label="Cari produk"></label><select id="categoryFilter" aria-label="Filter kategori"><option value="">Semua kategori</option></select></div><div class="product-grid" id="productGrid"><div class="catalog-state">Memuat katalog produk...</div></div></div></section>
-<section class="pricing" id="harga"><div class="wrap"><div class="section-head"><div><div class="eyebrow">INFORMASI HARGA</div><h2 class="section-title">Pilihan material.<br>Spesifikasi yang jelas.</h2></div><p>Pilihan kitchen set dan interior dengan rincian harga serta spesifikasi material.</p></div><p class="price-intro">Harga berikut menjadi panduan awal. Biaya akhir menyesuaikan ukuran, desain, dan kebutuhan proyek.</p><div class="price-grid">
-<article class="price-card"><div class="price-top"><h3>Kitchen Set</h3><div class="price">Rp1.600.000<span class="unit">/ meter</span></div></div><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>HPL Taco / Homega</li></ul><h4>Material finishing</h4><ul><li>Aksesori Carta / Taco</li><li>Engsel biasa</li><li>Rel biasa</li><li>Rak piring</li><li>Rak sendok</li><li>Rak bumbu</li></ul></article>
-<article class="price-card"><div class="price-top"><h3>Kitchen Set</h3><div class="price">Rp1.800.000<span class="unit">/ meter</span></div></div><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>HPL Taco</li></ul><h4>Material finishing</h4><ul><li>Aksesori Lenaga / Taco</li><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li></ul></article>
-<article class="price-card"><div class="price-top"><h3>Lemari Custom HPL</h3><div class="price">Rp1.800.000<span class="unit">/ meter</span></div></div><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>Finishing HPL Taco</li></ul><h4>Finishing</h4><ul><li>Engsel soft close</li><li>Rel double track</li><li>1 cermin</li><li>Kunci</li></ul></article>
-<article class="price-card"><div class="price-top"><h3>Kitchen Set Duco</h3><div class="price">Rp3.300.000<span class="unit">/ meter</span></div></div><h4>Bahan dasar & proses finishing</h4><ul><li>Blokmin 18 mm</li><li>Sanpolac</li><li>Dempul</li><li>Epoxy</li><li>Finishing cat duco tahap 1</li><li>Finishing cat duco tahap 2</li></ul><h4>Kelengkapan</h4><ul><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li><li>Rak sampah</li><li>Gratis LED strip</li></ul></article>
-<article class="price-card"><div class="price-top"><h3>Kitchen Set Istimewa</h3><div class="price">Rp2.500.000<span class="unit">/ meter</span></div></div><h4>Bahan dasar</h4><ul><li>PVC board 18 mm</li><li>HPL Taco</li></ul><h4>Material finishing</h4><ul><li>Aksesori Lenaga / Taco</li><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring stainless + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li><li>Gratis LED strip</li></ul></article>
-<article class="price-card"><div class="price-top"><h3>Kitchen Set + Top Table Granit</h3><div class="price">Rp2.500.000<span class="unit">/ meter · area bawah</span></div></div><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>HPL Taco</li></ul><h4>Finishing & kelengkapan</h4><ul><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li></ul></article>
-<article class="price-card"><div class="price-top"><h3>Backsplash / Keramik Dinding</h3><div class="price">Rp700.000–950.000<span class="unit">/ meter</span></div></div><h4>Pilihan material</h4><ul><li>Mosaic — Rp950.000 / meter</li><li>Keramik / granit — Rp700.000 / meter</li></ul></article>
-<article class="price-card"><div class="price-top"><h3>Backdrop TV</h3><div class="price">Mulai Rp1.600.000<span class="unit">/ meter</span></div></div><h4>Pilihan model</h4><ul><li>Minimalis — Rp1.600.000 / meter</li><li>Semi kabinet — Rp1.700.000 / meter</li><li>Full kabinet — Rp1.900.000 / meter</li></ul></article>
-<article class="price-card full"><div class="price-top"><h3>Partisi / Sekatan Ruangan</h3><div class="price">Mulai Rp1.600.000<span class="unit">/ meter</span></div></div><h4>Pilihan model</h4><ul><li>Kisi — Rp1.600.000 / meter</li><li>Kabinet — Rp1.800.000 / meter</li><li>2 muka — Rp2.200.000 / meter</li></ul></article>
+<section class="hero"><div class="wrap hero-layout"><div class="hero-copy"><div class="eyebrow hero-kicker">LUKI FURNITURE · FURNITURE CUSTOM</div><h1>Kitchen set &<br><em>interior custom.</em></h1><p>Dibuat sesuai ukuran ruang, kebutuhan, dan pilihan material Anda.</p><div class="hero-actions"><a class="button" href="#katalog">Lihat produk <span class="material-symbols-outlined">arrow_forward</span></a><a class="text-link" href="#harga">Daftar harga</a></div></div></div></section>
+<section class="catalog" id="katalog"><div class="wrap"><div class="section-head"><div><div class="eyebrow">KATALOG PRODUK</div><h2 class="section-title">Pilih furniture untuk ruang Anda.</h2></div><p>Cari produk berdasarkan nama atau kategori.</p></div><div class="catalog-tools"><label class="searchbox"><span class="material-symbols-outlined">search</span><input id="productSearch" type="search" placeholder="Cari produk..." aria-label="Cari produk"></label><select id="categoryFilter" aria-label="Filter kategori"><option value="">Semua kategori</option></select></div><div class="product-grid" id="productGrid"><div class="catalog-state">Memuat katalog produk...</div></div></div></section>
+<section class="pricing" id="harga"><div class="wrap"><div class="section-head"><div><div class="eyebrow">INFORMASI HARGA</div><h2 class="section-title">Daftar harga<br><em>dan spesifikasi.</em></h2></div><p>Pilih jenis furniture untuk melihat harga dan spesifikasinya.</p></div><p class="price-intro">Harga per meter. Biaya akhir mengikuti ukuran dan desain.</p><div class="price-grid">
+<article class="price-card"><div class="price-top"><h3>Kitchen Set</h3><div class="price">Rp1.600.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>HPL Taco / Homega</li></ul><h4>Material finishing</h4><ul><li>Aksesori Carta / Taco</li><li>Engsel biasa</li><li>Rel biasa</li><li>Rak piring</li><li>Rak sendok</li><li>Rak bumbu</li></ul></div></details></article>
+<article class="price-card"><div class="price-top"><h3>Kitchen Set</h3><div class="price">Rp1.800.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>HPL Taco</li></ul><h4>Material finishing</h4><ul><li>Aksesori Lenaga / Taco</li><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li></ul></div></details></article>
+<article class="price-card"><div class="price-top"><h3>Lemari Custom HPL</h3><div class="price">Rp1.800.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>Finishing HPL Taco</li></ul><h4>Finishing</h4><ul><li>Engsel soft close</li><li>Rel double track</li><li>1 cermin</li><li>Kunci</li></ul></div></details></article>
+<article class="price-card"><div class="price-top"><h3>Kitchen Set Duco</h3><div class="price">Rp3.300.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Bahan dasar & proses finishing</h4><ul><li>Blokmin 18 mm</li><li>Sanpolac</li><li>Dempul</li><li>Epoxy</li><li>Finishing cat duco tahap 1</li><li>Finishing cat duco tahap 2</li></ul><h4>Kelengkapan</h4><ul><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li><li>Rak sampah</li><li>Gratis LED strip</li></ul></div></details></article>
+<article class="price-card"><div class="price-top"><h3>Kitchen Set Istimewa</h3><div class="price">Rp2.500.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Bahan dasar</h4><ul><li>PVC board 18 mm</li><li>HPL Taco</li></ul><h4>Material finishing</h4><ul><li>Aksesori Lenaga / Taco</li><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring stainless + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li><li>Gratis LED strip</li></ul></div></details></article>
+<article class="price-card"><div class="price-top"><h3>Kitchen Set + Top Table Granit</h3><div class="price">Rp2.500.000<span class="unit">/ meter · area bawah</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Bahan dasar</h4><ul><li>Blokmin 18 mm</li><li>HPL Taco</li></ul><h4>Finishing & kelengkapan</h4><ul><li>Engsel soft close</li><li>Rel double track</li><li>Rak piring + tatakan</li><li>Rak sendok besar / kecil</li><li>Kaca iced</li><li>Rak bumbu</li><li>Laci gas</li></ul></div></details></article>
+<article class="price-card"><div class="price-top"><h3>Backsplash / Keramik Dinding</h3><div class="price">Rp700.000–950.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Pilihan material</h4><ul><li>Mosaic — Rp950.000 / meter</li><li>Keramik / granit — Rp700.000 / meter</li></ul></div></details></article>
+<article class="price-card"><div class="price-top"><h3>Backdrop TV</h3><div class="price">Mulai Rp1.600.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Pilihan model</h4><ul><li>Minimalis — Rp1.600.000 / meter</li><li>Semi kabinet — Rp1.700.000 / meter</li><li>Full kabinet — Rp1.900.000 / meter</li></ul></div></details></article>
+<article class="price-card full"><div class="price-top"><h3>Partisi / Sekatan Ruangan</h3><div class="price">Mulai Rp1.600.000<span class="unit">/ meter</span></div></div><details class="price-details"><summary>Lihat spesifikasi <span class="material-symbols-outlined">expand_more</span></summary><div class="price-details-content"><h4>Pilihan model</h4><ul><li>Kisi — Rp1.600.000 / meter</li><li>Kabinet — Rp1.800.000 / meter</li><li>2 muka — Rp2.200.000 / meter</li></ul></div></details></article>
 </div><p class="price-note">Harga mengikuti daftar dari pemilik dan dihitung per meter sesuai jenis layanan. Ukuran, desain, serta detail kebutuhan proyek perlu dikonsultasikan terlebih dahulu.</p></div></section>
 <section class="contact" id="kontak"><div class="wrap contact-inner"><div><div class="eyebrow">KONSULTASI</div><h2>Butuh furniture custom?</h2><p>Diskusikan ukuran, model, dan kebutuhan furniture bersama Luki Furniture.</p></div><a class="button" href="#harga">Lihat harga <span class="material-symbols-outlined">north_east</span></a></div></section>
 </main>
