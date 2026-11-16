@@ -8,11 +8,11 @@
 body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--ink)}
 .btn{background:#e99b19;color:#191817}.btn:hover{background:#ffd36c}
 .admin-brand{display:flex;align-items:center;gap:10px;letter-spacing:1.3px}
-.admin-brand{display:flex;align-items:center;justify-content:center}.admin-brand img{width:88px;height:72px;object-fit:contain;object-position:center;border-radius:10px;background:#fff}.admin-brand span{display:none}
+.top{position:relative;min-height:82px}.admin-brand{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center}.admin-brand img{display:block;width:76px;height:76px;object-fit:contain;object-position:center;border-radius:12px;background:#fff}.admin-brand span{display:none}
 .admin-brand b{font:800 19px Manrope,sans-serif;display:block}
 .admin-brand small{font:600 17px Caveat,cursive;letter-spacing:0;color:#b87312;text-transform:none}
 </style></head><body><main class="wrap">
-<header class="top"><div class="brand admin-brand"><img data-luki-logo alt="Logo Luki Furniture"></div><a href="./index.html"> Lihat katalog</a></header>
+<header class="top"><div class="brand admin-brand"><img src="./assets/luki-logo.jpg" alt="Logo Luki Furniture"></div><a href="./index.html"> Lihat katalog</a></header>
 
 <section id="adminPanel"><div class="panel"><div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><div><h1>Kelola katalog</h1><p class="sub" style="margin:5px 0 0">Atur nama, kategori, foto, dan spesifikasi produk Luki Furniture. Harga layanan ditampilkan terpisah dari katalog produk.</p></div></div></div>
 <div class="panel"><h2 id="formTitle">Tambah produk baru</h2><form id="productForm"><input type="hidden" id="productId"><div class="grid">
@@ -28,8 +28,7 @@ body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--ink)}
 <div class="field"><label><span><input id="active" type="checkbox" checked style="width:auto"> Tampilkan di katalog</span></label></div>
 </div><div class="actions"><button class="btn" type="submit" id="save">Simpan produk</button><button class="btn secondary" type="button" id="reset">Kosongkan form</button></div><div id="formStatus" class="status hidden"></div></form></div>
 <div class="panel"><h2>Daftar produk</h2><div id="productList" class="products"><div class="empty">Memuat produk...</div></div></div></section>
-</main><script>fetch("./assets/luki-logo.jpg.b64").then(r=>r.text()).then(v=>document.querySelectorAll("[data-luki-logo]").forEach(img=>img.src="data:image/jpeg;base64,"+v.trim())).catch(()=>{});</script>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script>
+</main><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script>
 const SUPABASE_URL='https://qargnijwavdqcspwqmlu.supabase.co',SUPABASE_KEY='sb_publishable_YGPdNyRX8n7ryQhh5a6EAQ_aWc-Ggeg';
 let db=null;try{if(!window.supabase?.createClient)throw new Error('Pustaka Supabase gagal dimuat. Periksa koneksi internet lalu muat ulang halaman.');db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY)}catch(e){document.getElementById('productList').textContent=e.message;document.getElementById('formStatus').textContent=e.message;document.getElementById('formStatus').classList.remove('hidden')}
 const $=id=>document.getElementById(id);
