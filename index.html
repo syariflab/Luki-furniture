@@ -304,13 +304,13 @@ button:active,a:active,[role="button"]:active{ -webkit-tap-highlight-color:trans
 .dialog-gallery{grid-column:1;grid-row:1/3;min-width:0;align-self:start;overflow:hidden;border-radius:13px;background:#f3f0eb}
 .dialog-gallery-track{display:flex;width:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x}
 .dialog-gallery-track::-webkit-scrollbar{display:none}
-.dialog-gallery .dialog-image{flex:0 0 100%;width:100%;height:auto;max-height:calc(88vh - 150px);aspect-ratio:4/5;object-fit:contain;object-position:center;border-radius:0;background:#f3f0eb;margin:0;scroll-snap-align:start}
+.dialog-gallery .dialog-image{flex:0 0 100%;width:100%;height:auto;max-height:76dvh;aspect-ratio:auto;object-fit:contain;object-position:center;border-radius:0;background:transparent;margin:0;scroll-snap-align:start}
 .dialog-gallery-dots{display:flex;justify-content:center;align-items:center;gap:6px;padding:10px 8px 11px;background:#fffdfa}
 .dialog-gallery-dots span{width:5px;height:5px;border-radius:50%;background:#d8d1c8;transition:width .25s,background .25s}
 .dialog-gallery-dots span.active{width:17px;border-radius:6px;background:var(--accent)}
 @media(max-width:640px){
  .dialog-gallery{width:100%;border-radius:11px;margin:0 0 15px}
- .dialog-gallery .dialog-image{width:100%;height:auto;max-height:42dvh;aspect-ratio:4/3;object-fit:contain}
+ .dialog-gallery .dialog-image{width:100%;height:auto;max-height:64dvh;aspect-ratio:auto;object-fit:contain;background:transparent}
  .dialog-gallery-dots{padding:8px;background:#fffdfa}
 }
 </style>
