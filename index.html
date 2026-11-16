@@ -299,6 +299,20 @@ button:active,a:active,[role="button"]:active{ -webkit-tap-highlight-color:trans
  }
 }
 
+
+/* Product photo gallery: swipe on touch and rotate automatically */
+.dialog-gallery{grid-column:1;grid-row:1/3;min-width:0;align-self:start;overflow:hidden;border-radius:13px;background:#f3f0eb}
+.dialog-gallery-track{display:flex;width:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x}
+.dialog-gallery-track::-webkit-scrollbar{display:none}
+.dialog-gallery .dialog-image{flex:0 0 100%;width:100%;height:auto;max-height:calc(88vh - 150px);aspect-ratio:4/5;object-fit:contain;object-position:center;border-radius:0;background:#f3f0eb;margin:0;scroll-snap-align:start}
+.dialog-gallery-dots{display:flex;justify-content:center;align-items:center;gap:6px;padding:10px 8px 11px;background:#fffdfa}
+.dialog-gallery-dots span{width:5px;height:5px;border-radius:50%;background:#d8d1c8;transition:width .25s,background .25s}
+.dialog-gallery-dots span.active{width:17px;border-radius:6px;background:var(--accent)}
+@media(max-width:640px){
+ .dialog-gallery{width:100%;border-radius:11px;margin:0 0 15px}
+ .dialog-gallery .dialog-image{width:100%;height:auto;max-height:42dvh;aspect-ratio:4/3;object-fit:contain}
+ .dialog-gallery-dots{padding:8px;background:#fffdfa}
+}
 </style>
 </head>
 <body>
@@ -367,31 +381,43 @@ const grid=document.getElementById('productGrid'),search=document.getElementById
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const money=v=>v==null?'Hubungi kami':new Intl.NumberFormat('id-ID',{style:'currency',currency:'IDR',maximumFractionDigits:0}).format(v);
 function fallbackImage(p){const n=((p.name||'')+' '+(p.categories?.name||'')).toLowerCase();if(/kitchen|dapur/.test(n))return 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=82';if(/wardrobe|lemari|bedroom|kamar/.test(n))return 'https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=82';if(/tv|backdrop|living|ruang keluarga/.test(n))return 'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=82';if(/partisi|partition/.test(n))return 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=82';return 'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=82'}
+let galleryTimer=null,galleryResumeTimer=null;
+function stopGalleryAuto(){if(galleryTimer)clearInterval(galleryTimer);galleryTimer=null}
+function startGalleryAuto(track){stopGalleryAuto();if(!track||track.children.length<2)return;galleryTimer=setInterval(()=>{const dialog=$('productDialog');if(!dialog.open||document.hidden)return;const count=track.children.length;let next=Math.round(track.scrollLeft/track.clientWidth)+1;if(next>=count)next=0;track.scrollTo({left:next*track.clientWidth,behavior:'smooth'})},3600)}
 function render(){
  const q=search.value.trim().toLocaleLowerCase('id'),cat=filter.value;
  const rows=products.filter(p=>{
- const categoryName=p.categories?.name||'';
- const haystack=[p.name,p.short_description,p.description,p.material,p.dimensions,categoryName].filter(Boolean).join(' ').toLocaleLowerCase('id');
- return (!cat||p.category_id===cat)&&(!q||haystack.includes(q));
+  const categoryName=p.categories?.name||'';
+  const haystack=[p.name,p.short_description,p.description,p.material,p.dimensions,categoryName].filter(Boolean).join(' ').toLocaleLowerCase('id');
+  return (!cat||p.category_id===cat)&&(!q||haystack.includes(q));
  }).sort((a,b)=>Number(Boolean(b.is_featured))-Number(Boolean(a.is_featured)));
  $('productCount').textContent=rows.length+' produk';
  if(!rows.length){grid.innerHTML='<div class="catalog-state">Produk belum tersedia atau tidak ditemukan.</div>';return}
  grid.innerHTML=rows.map(p=>{
- const image=safeImageUrl(p.cover_image)||fallbackImage(p);
- const category=p.categories?.name||'Custom furniture';
- return '<article class="product-card'+(p.is_featured?' featured-card':'')+'"><div class="product-photo"><img loading="lazy" src="'+esc(image)+'" alt="'+esc(p.name||'Produk Luki Furniture')+'" onerror="this.onerror=null;this.src=\'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=82\'">'+(p.is_featured?'<span class="product-badge">PRODUK UNGGULAN</span>':'')+'</div><div class="product-content"><div class="product-meta"><h3>'+esc(p.name||'Produk tanpa nama')+'</h3></div><div class="product-foot"><span>'+esc(category)+'</span><button type="button" data-id="'+esc(p.id)+'">Lihat detail </button></div></div></article>';
+  const image=safeImageUrl(p.cover_image)||fallbackImage(p);
+  const category=p.categories?.name||'Custom furniture';
+  return '<article class="product-card'+(p.is_featured?' featured-card':'')+'"><div class="product-photo"><img loading="lazy" src="'+esc(image)+'" alt="'+esc(p.name||'Produk Luki Furniture')+'" onerror="this.onerror=null;this.src=\'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=82\'">'+(p.is_featured?'<span class="product-badge">PRODUK UNGGULAN</span>':'')+'</div><div class="product-content"><div class="product-meta"><h3>'+esc(p.name||'Produk tanpa nama')+'</h3></div><div class="product-foot"><span>'+esc(category)+'</span><button type="button" data-id="'+esc(p.id)+'">Lihat detail </button></div></div></article>';
  }).join('');
  grid.querySelectorAll('[data-id]').forEach(b=>b.addEventListener('click',()=>{
- const p=products.find(x=>x.id===b.dataset.id);if(!p)return;
- $('dialogTitle').textContent=p.name||'Detail produk';
- const body=$('dialogBody');body.replaceChildren();
- const detailImage=document.createElement('img');detailImage.className='dialog-image';detailImage.alt=p.name||'Foto produk Luki Furniture';detailImage.src=safeImageUrl(p.cover_image)||fallbackImage(p);detailImage.loading='eager';detailImage.decoding='async';detailImage.onerror=()=>{detailImage.onerror=null;detailImage.src=fallbackImage(p)};body.append(detailImage);
- const description=document.createElement('p');description.textContent=p.description||p.short_description||'Informasi produk dapat dikonsultasikan dengan Luki Furniture.';body.append(description);
- const details=[['Kategori',p.categories?.name],['Material',p.material],['Ukuran',p.dimensions]];
- const dl=document.createElement('dl');
- details.filter(x=>x[1]).forEach(([label,value])=>{const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;dl.append(dt,dd)});
- if(dl.children.length)body.append(dl);
- const dialog=$('productDialog');if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');
+  const p=products.find(x=>x.id===b.dataset.id);if(!p)return;
+  stopGalleryAuto();$('dialogTitle').textContent=p.name||'Detail produk';
+  const body=$('dialogBody');body.replaceChildren();
+  const galleryUrls=(p.images||[]).map(x=>safeImageUrl(x.image_url)).filter(Boolean);
+  if(!galleryUrls.length&&safeImageUrl(p.cover_image))galleryUrls.push(safeImageUrl(p.cover_image));
+  if(!galleryUrls.length)galleryUrls.push(fallbackImage(p));
+  const gallery=document.createElement('div');gallery.className='dialog-gallery';
+  const track=document.createElement('div');track.className='dialog-gallery-track';track.setAttribute('aria-label','Galeri foto '+(p.name||'produk'));
+  galleryUrls.slice(0,3).forEach((url,index)=>{const img=document.createElement('img');img.className='dialog-image';img.alt=(p.name||'Foto produk Luki Furniture')+' — foto '+(index+1);img.src=url;img.loading=index===0?'eager':'lazy';img.decoding='async';img.onerror=()=>{img.onerror=null;img.src=fallbackImage(p)};track.append(img)});
+  gallery.append(track);
+  if(galleryUrls.length>1){const dots=document.createElement('div');dots.className='dialog-gallery-dots';galleryUrls.slice(0,3).forEach((_,index)=>{const dot=document.createElement('span');if(index===0)dot.classList.add('active');dots.append(dot)});gallery.append(dots);track.addEventListener('scroll',()=>{const active=Math.min(galleryUrls.length-1,Math.round(track.scrollLeft/Math.max(1,track.clientWidth)));[...dots.children].forEach((dot,index)=>dot.classList.toggle('active',index===active))},{passive:true});track.addEventListener('touchstart',()=>{stopGalleryAuto();clearTimeout(galleryResumeTimer)},{passive:true});track.addEventListener('touchend',()=>{clearTimeout(galleryResumeTimer);galleryResumeTimer=setTimeout(()=>startGalleryAuto(track),4200)},{passive:true})}
+  body.append(gallery);
+  const description=document.createElement('p');description.textContent=p.description||p.short_description||'Informasi produk dapat dikonsultasikan dengan Luki Furniture.';body.append(description);
+  const details=[['Kategori',p.categories?.name],['Material',p.material],['Ukuran',p.dimensions]];
+  const dl=document.createElement('dl');
+  details.filter(x=>x[1]).forEach(([label,value])=>{const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;dl.append(dt,dd)});
+  if(dl.children.length)body.append(dl);
+  const dialog=$('productDialog');if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');
+  startGalleryAuto(track);
  }));
  observeReveals();
 }
@@ -400,9 +426,9 @@ function safeImageUrl(value){
  try{const u=new URL(value,location.href);return ['https:','http:'].includes(u.protocol)?u.href:''}catch{return ''}
 }
 function $(id){return document.getElementById(id)}
-$('dialogClose').addEventListener('click',()=>$('productDialog').close());
+$('dialogClose').addEventListener('click',()=>{$('productDialog').close();stopGalleryAuto();clearTimeout(galleryResumeTimer)});$('productDialog').addEventListener('close',()=>{stopGalleryAuto();clearTimeout(galleryResumeTimer)});
 $('productDialog').addEventListener('click',e=>{if(e.target===$('productDialog'))$('productDialog').close()});
-async function load(){try{if(!window.supabase)throw new Error('Supabase client unavailable');const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);const [pr,cr]=await Promise.all([db.from('products').select('id,name,slug,short_description,description,material,dimensions,category_id,cover_image,is_featured,categories(name)').eq('is_active',true).order('created_at',{ascending:false}),db.from('categories').select('id,name').eq('is_active',true).order('sort_order')]);if(pr.error)throw pr.error;products=pr.data||[];if(!cr.error)filter.innerHTML='<option value="">Semua kategori</option>'+(cr.data||[]).map(c=>'<option value="'+esc(c.id)+'">'+esc(c.name)+'</option>').join('');if(!cr.error){const chips=document.getElementById('categoryTabs');chips.innerHTML='<button class="category-tab active" data-category="">Semua</button>'+(cr.data||[]).map(cat=>'<button class="category-tab" data-category="'+esc(cat.id)+'">'+esc(cat.name)+'</button>').join('');chips.querySelectorAll('[data-category]').forEach(chip=>chip.addEventListener('click',()=>{filter.value=chip.dataset.category||'';chips.querySelectorAll('.category-tab').forEach(x=>x.classList.toggle('active',x===chip));render()}));}render()}catch(e){grid.innerHTML='<div class="catalog-state">Katalog produk sedang belum tersedia. Silakan hubungi Luki Furniture untuk informasi layanan.</div>';console.error(e)}}
+async function load(){try{if(!window.supabase)throw new Error('Supabase client unavailable');const db=window.supabase.createClient(SUPABASE_URL,SUPABASE_KEY);const [pr,cr,ir]=await Promise.all([db.from('products').select('id,name,slug,short_description,description,material,dimensions,category_id,cover_image,is_featured,categories(name)').eq('is_active',true).order('created_at',{ascending:false}),db.from('categories').select('id,name').eq('is_active',true).order('sort_order'),db.from('product_images').select('product_id,image_url,sort_order').order('sort_order')]);if(pr.error)throw pr.error;if(ir.error)throw ir.error;const imageMap=new Map();(ir.data||[]).forEach(img=>{if(!imageMap.has(img.product_id))imageMap.set(img.product_id,[]);imageMap.get(img.product_id).push(img)});products=(pr.data||[]).map(p=>({...p,images:imageMap.get(p.id)||[]}));if(!cr.error)filter.innerHTML='<option value="">Semua kategori</option>'+(cr.data||[]).map(c=>'<option value="'+esc(c.id)+'">'+esc(c.name)+'</option>').join('');if(!cr.error){const chips=document.getElementById('categoryTabs');chips.innerHTML='<button class="category-tab active" data-category="">Semua</button>'+(cr.data||[]).map(cat=>'<button class="category-tab" data-category="'+esc(cat.id)+'">'+esc(cat.name)+'</button>').join('');chips.querySelectorAll('[data-category]').forEach(chip=>chip.addEventListener('click',()=>{filter.value=chip.dataset.category||'';chips.querySelectorAll('.category-tab').forEach(x=>x.classList.toggle('active',x===chip));render()}));}render()}catch(e){grid.innerHTML='<div class="catalog-state">Katalog produk sedang belum tersedia. Silakan hubungi Luki Furniture untuk informasi layanan.</div>';console.error(e)}}
 search.addEventListener('input',render);filter.addEventListener('change',render);let promoIndex=0;const promoTrack=document.getElementById('promoTrack'),promoDots=[...document.querySelectorAll('#promoDots button')],promoCount=promoTrack.children.length;function showPromo(n){promoIndex=(n+promoCount)%promoCount;promoTrack.style.transform='translateX(-'+promoIndex*100+'%)';promoDots.forEach((d,i)=>d.classList.toggle('active',i===promoIndex))}document.getElementById('promoPrev').addEventListener('click',()=>showPromo(promoIndex-1));document.getElementById('promoNext').addEventListener('click',()=>showPromo(promoIndex+1));promoDots.forEach((d,i)=>d.addEventListener('click',()=>showPromo(i)));let promoTouch=0;promoTrack.addEventListener('touchstart',e=>promoTouch=e.changedTouches[0].clientX,{passive:true});promoTrack.addEventListener('touchend',e=>{const dx=e.changedTouches[0].clientX-promoTouch;if(Math.abs(dx)>45)showPromo(promoIndex+(dx<0?1:-1))},{passive:true});load();observeReveals();
 </script>
 </body>
