@@ -262,7 +262,7 @@ button:active,a:active,[role="button"]:active{ -webkit-tap-highlight-color:trans
 }
 
 
-/* Product photo: natural proportions, without a surrounding frame */
+/* Product photo: subtle edge follows the image itself */
 .dialog-image{
   display:block;
   width:100%;
@@ -273,9 +273,10 @@ button:active,a:active,[role="button"]:active{ -webkit-tap-highlight-color:trans
   object-position:center;
   padding:0;
   margin:0;
-  border:0;
-  border-radius:0;
+  border:1px solid rgba(91,76,58,.18);
+  border-radius:12px;
   background:transparent;
+  overflow:hidden;
 }
 @media(max-width:640px){
   .dialog-image{
@@ -286,8 +287,8 @@ button:active,a:active,[role="button"]:active{ -webkit-tap-highlight-color:trans
     object-fit:contain;
     padding:0;
     margin:0 0 18px;
-    border:0;
-    border-radius:0;
+    border:1px solid rgba(91,76,58,.18);
+    border-radius:10px;
     background:transparent;
   }
 }
