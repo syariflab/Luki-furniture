@@ -75,14 +75,31 @@ body{background:var(--bg);color:var(--ink);padding-bottom:90px;font-family:'Plus
 @media(min-width:761px){body{padding-bottom:25px}.dock-nav{display:none}.promo-slide{min-height:315px}.product-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}}
 @media(max-width:760px){.header-location{display:none}.promo-slide{min-height:245px}.promo-copy{max-width:84%;padding:23px 20px}.promo-copy h1,.promo-copy h2{font-size:26px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-meta{padding:9px}.product-meta h3{font-size:11px}.product-meta p{font-size:9px}.inspiration-card{grid-template-columns:1fr}.inspiration-image{min-height:175px}.inspiration-copy{padding:18px}.price-grid{grid-template-columns:1fr}.price-card.full{grid-column:auto}.price-card.full ul{grid-template-columns:1fr 1fr}.contact-card{display:block;padding:20px}.contact-action{margin-top:14px}.footer-inner{align-items:flex-start;flex-direction:column}}
 
-/* Product cards: concise information and featured products in single full-width rows */
+/* Product cards: concise layout with full-width featured imagery */
 .product-content{min-width:0;display:flex;flex-direction:column;justify-content:center;padding:12px 14px}
 .product-meta{padding:0!important}.product-meta h3{font-size:13px!important;line-height:1.4!important;min-height:0!important;margin:0!important}
 .product-foot{margin:9px 0 0!important;padding:8px 0 0!important;border-top:1px solid var(--line)!important}
 .product-foot span{font-size:9px!important;color:var(--muted)!important}.product-foot button{font-size:10px!important}
-.product-card.featured-card{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;background:#fff;border:1px solid var(--line);border-radius:13px;overflow:hidden}
-.featured-card .product-photo{aspect-ratio:4/3;min-height:0}.featured-card .product-content{padding:18px 22px}.featured-card .product-meta h3{font-size:clamp(16px,2vw,21px)!important}.featured-card .product-foot{margin-top:12px!important}
-@media(max-width:760px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.product-card.featured-card{grid-column:1/-1;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.featured-card .product-photo{aspect-ratio:1/1}.featured-card .product-content{padding:12px}.featured-card .product-meta h3{font-size:14px!important}.featured-card .product-foot{align-items:flex-start;flex-direction:column;gap:5px}.featured-card .product-foot button{padding:2px 0}}
+.product-card.featured-card{grid-column:1/-1;display:flex;flex-direction:column;align-items:stretch;background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 2px 9px rgba(52,46,42,.045)}
+.featured-card .product-photo{width:100%;aspect-ratio:2/1;max-height:520px;min-height:0;border-radius:0;background:#eeeae4}
+.featured-card .product-photo img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+.featured-card .product-content{width:100%;padding:17px 20px 16px}
+.featured-card .product-meta h3{font-size:clamp(16px,1.8vw,21px)!important;line-height:1.35!important}
+.featured-card .product-foot{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:12px;margin-top:10px!important;padding-top:11px!important}
+.featured-card .product-foot span{font-size:10px!important}
+.featured-card .product-foot button{font-size:11px!important;padding:5px 0}
+@media(min-width:761px) and (max-width:1000px){.featured-card .product-photo{aspect-ratio:16/9;max-height:440px}}
+@media(max-width:760px){
+ .product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .product-card.featured-card{grid-column:1/-1;display:flex;flex-direction:column}
+ .featured-card .product-photo{width:100%;aspect-ratio:4/3;max-height:390px;min-height:0}
+ .featured-card .product-content{padding:13px 14px 12px}
+ .featured-card .product-meta h3{font-size:15px!important}
+ .featured-card .product-foot{flex-direction:row;align-items:center;gap:10px;margin-top:9px!important;padding-top:9px!important}
+ .featured-card .product-foot span{font-size:9px!important}
+ .featured-card .product-foot button{font-size:10px!important}
+}
+@media(max-width:370px){.featured-card .product-photo{aspect-ratio:5/4}.featured-card .product-content{padding:12px}.featured-card .product-meta h3{font-size:14px!important}}
 </style>
 </head>
 <body>
