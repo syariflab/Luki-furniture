@@ -261,6 +261,37 @@ button:active,a:active,[role="button"]:active{ -webkit-tap-highlight-color:trans
   .dialog-body dl{grid-template-columns:1fr}
 }
 
+
+/* Product photo: natural proportions, without a surrounding frame */
+.dialog-image{
+  display:block;
+  width:100%;
+  height:auto;
+  max-height:68dvh;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+  padding:0;
+  margin:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+}
+@media(max-width:640px){
+  .dialog-image{
+    width:100%;
+    height:auto;
+    max-height:56dvh;
+    aspect-ratio:auto;
+    object-fit:contain;
+    padding:0;
+    margin:0 0 18px;
+    border:0;
+    border-radius:0;
+    background:transparent;
+  }
+}
+
 </style>
 </head>
 <body>
