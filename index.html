@@ -8,7 +8,7 @@
 <title>Luki Furniture — Kitchen Set & Interior Custom</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0" rel="stylesheet">
 <style>
 :root{--bg:#eeeee5;--paper:#f9f8f3;--ink:#20251f;--muted:#74786e;--line:#d8d9ce;--green:#303a30;--olive:#626b50;--copper:#ad805c;--display:'Manrope',sans-serif;--body:'DM Sans',sans-serif}
@@ -313,11 +313,31 @@ button:active,a:active,[role="button"]:active{ -webkit-tap-highlight-color:trans
  .dialog-gallery .dialog-image{width:100%;height:100%;max-height:none;aspect-ratio:auto;object-fit:cover;background:transparent}
  .dialog-gallery-dots{padding:8px;background:#fffdfa}
 }
+
+/* Owner identity: original Luki Furniture logo and matching palette */
+:root{--bg:#fffaf2;--paper:#ffffff;--ink:#191817;--muted:#766e64;--line:#eee3d4;--green:#191817;--olive:#b66d16;--copper:#e99b19;--accent:#e99b19}
+body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--ink)}
+.brand-logo{display:block;width:48px;height:54px;object-fit:contain;flex:0 0 auto}
+.brand-copy strong{font-family:Manrope,sans-serif;font-weight:800;letter-spacing:1.1px}
+.brand-copy small{font-family:Caveat,cursive;font-size:17px;line-height:1;color:#b87312;letter-spacing:0;text-transform:none;font-weight:600}
+.footer-brand-logo{width:56px;height:64px;object-fit:contain;flex:0 0 auto;background:#fff;border-radius:5px}
+.footer-brand strong{font-family:Manrope,sans-serif;letter-spacing:1.3px}
+.footer-brand small{font-family:Caveat,cursive;font-size:17px;letter-spacing:0;text-transform:none;color:#f4bd4e;font-weight:600}
+.brand-mark,.footer-brand-mark{display:none}
+.icon-button{background:#fffaf2;border-color:#e9d8c1}
+.promo-carousel{background:#211d18}
+.promo-slide:after{background:linear-gradient(90deg,#171411ed,#171411a8 52%,#17141118)}
+.promo-kicker,.eyebrow{color:#e7a52e}
+.promo-cta,.btn{background:#f4b32e;color:#191817}
+.promo-cta:hover,.btn:hover{background:#ffd36c;color:#191817}
+.category-tab.active,.product-badge{background:#fff0d0;color:#75440d}
+.footer{background:#191817}
+@media(max-width:620px){.brand-logo{width:42px;height:48px}.brand-copy small{font-size:16px}}
 </style>
 </head>
 <body>
 <div class="announcement">LUKI FURNITURE <span style="padding:0 8px;color:#d2b18e">·</span> KITCHEN SET & INTERIOR CUSTOM</div>
-<header class="site-header"><div class="wrap header-main"><a class="brand" href="#beranda"><span class="brand-mark" aria-hidden="true"><span class="material-symbols-outlined">chair</span></span><span class="brand-copy"><strong>Luki Furniture</strong><small>Custom Interior · Karawang</small></span></a><span class="header-location"><span class="material-symbols-outlined">location_on</span>Karawang, Jawa Barat</span><button class="icon-button" id="openSearch" type="button" aria-label="Cari katalog"><span class="material-symbols-outlined">search</span></button></div></header><div class="search-modal" id="searchModal"><div class="search-row"><span class="material-symbols-outlined">search</span><input id="productSearch" type="search" placeholder="Cari kitchen set, lemari, backdrop..." aria-label="Cari produk"><button id="closeSearch" type="button" aria-label="Tutup"><span class="material-symbols-outlined">close</span></button></div></div></header>
+<header class="site-header"><div class="wrap header-main"><a class="brand" href="#beranda"><img class="brand-logo" data-luki-logo alt="Logo Luki Furniture"><span class="brand-copy"><strong>LUKI</strong><small>Furniture · Custom Interior</small></span></a><span class="header-location"><span class="material-symbols-outlined">location_on</span>Karawang, Jawa Barat</span><button class="icon-button" id="openSearch" type="button" aria-label="Cari katalog"><span class="material-symbols-outlined">search</span></button></div></header><div class="search-modal" id="searchModal"><div class="search-row"><span class="material-symbols-outlined">search</span><input id="productSearch" type="search" placeholder="Cari kitchen set, lemari, backdrop..." aria-label="Cari produk"><button id="closeSearch" type="button" aria-label="Tutup"><span class="material-symbols-outlined">close</span></button></div></div></header>
 <main>
 <section class="promo-area" id="beranda"><div class="promo-carousel"><div class="promo-track" id="promoTrack"><article class="promo-slide"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1500&q=85" alt="Inspirasi interior rumah modern"><div class="promo-copy"><span class="promo-kicker">LUKI FURNITURE · CUSTOM MADE</span><h1>Ruang lebih nyaman, sesuai kebutuhan.</h1><p>Kitchen set dan interior custom sesuai kebutuhan ruang Anda.</p><a class="promo-cta" href="#katalog">Jelajahi katalog </a></div></article><article class="promo-slide"><img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1500&q=85" alt="Inspirasi kabinet dan interior minimalis" loading="lazy"><div class="promo-copy"><span class="promo-kicker">DIRANCANG UNTUK RUANG ANDA</span><h2>Setiap sudut punya fungsinya.</h2><p>Dari dapur hingga area keluarga. Konsultasikan kebutuhan furniture custom Anda.</p><a class="promo-cta" href="#kontak">Konsultasi desain </a></div></article><article class="promo-slide"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1500&q=85" alt="Inspirasi ruang keluarga" loading="lazy"><div class="promo-copy"><span class="promo-kicker">MATERIAL & FINISHING</span><h2>Detail kecil, hasil yang terasa.</h2><p>Pilih material dan detail pengerjaan sesuai kebutuhan serta anggaran Anda.</p><a class="promo-cta price-trigger" href="#harga">Lihat informasi harga </a></div></article></div><div class="promo-dots" id="promoDots"><button class="active" aria-label="Banner 1"></button><button aria-label="Banner 2"></button><button aria-label="Banner 3"></button></div><div class="promo-controls"><button class="promo-arrow" id="promoPrev" type="button">‹</button><button class="promo-arrow" id="promoNext" type="button">›</button></div></div></section></section>
 <div class="category-shell" id="kategori"><div class="category-scroll" id="categoryTabs"><button class="category-tab active" data-category="">Semua</button></div></div></section>
@@ -340,7 +360,7 @@ button:active,a:active,[role="button"]:active{ -webkit-tap-highlight-color:trans
 <footer class="footer"><div class="wrap">
 <div class="footer-main">
 <div class="footer-brand-block">
-<a class="footer-brand" href="#beranda" aria-label="Luki Furniture - Beranda"><span class="footer-brand-mark"><span class="material-symbols-outlined">chair</span></span><span><strong>LUKI</strong><small>FURNITURE CUSTOM</small></span></a>
+<a class="footer-brand" href="#beranda" aria-label="Luki Furniture - Beranda"><img class="footer-brand-logo" data-luki-logo alt="Logo Luki Furniture"><span><strong>LUKI</strong><small>Furniture</small></span></a>
 <h2>Ruang nyaman, dirancang sesuai kebutuhan.</h2>
 <p>Solusi kitchen set, furniture, dan interior custom untuk ruang yang lebih fungsional dan personal.</p>
 </div>
@@ -350,6 +370,7 @@ button:active,a:active,[role="button"]:active{ -webkit-tap-highlight-color:trans
 </div>
 <div class="footer-bottom"><span>© <span id="year"></span> Luki Furniture. Hak cipta dilindungi.</span><span>KITCHEN SET &amp; INTERIOR CUSTOM</span></div>
 </div></footer>
+<script>fetch("./assets/luki-logo.jpg.b64").then(r=>r.text()).then(v=>document.querySelectorAll("[data-luki-logo]").forEach(img=>img.src="data:image/jpeg;base64,"+v.trim())).catch(()=>{});</script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 // Reveal sections and cards only when they approach the viewport.
