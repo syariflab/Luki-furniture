@@ -74,6 +74,15 @@ body{background:var(--bg);color:var(--ink);padding-bottom:90px;font-family:'Plus
 .dock-nav{position:fixed;z-index:60;left:12px;right:12px;bottom:calc(10px + env(safe-area-inset-bottom));height:60px;width:min(480px,calc(100% - 24px));margin:auto;border-radius:16px;background:#303f32f7;backdrop-filter:blur(14px);box-shadow:0 8px 25px #25302633;display:flex;align-items:center;justify-content:space-around}.dock-link{border:0;background:none;color:#c4cec4;display:flex;flex-direction:column;align-items:center;gap:2px;min-width:65px;font-size:9px;font-weight:700}.dock-link .material-symbols-outlined{font-size:20px}.dock-link.active{color:white}.dock-link.active .material-symbols-outlined{color:#d6b18f}
 @media(min-width:761px){body{padding-bottom:25px}.dock-nav{display:none}.promo-slide{min-height:315px}.product-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}}
 @media(max-width:760px){.header-location{display:none}.promo-slide{min-height:245px}.promo-copy{max-width:84%;padding:23px 20px}.promo-copy h1,.promo-copy h2{font-size:26px}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-meta{padding:9px}.product-meta h3{font-size:11px}.product-meta p{font-size:9px}.inspiration-card{grid-template-columns:1fr}.inspiration-image{min-height:175px}.inspiration-copy{padding:18px}.price-grid{grid-template-columns:1fr}.price-card.full{grid-column:auto}.price-card.full ul{grid-template-columns:1fr 1fr}.contact-card{display:block;padding:20px}.contact-action{margin-top:14px}.footer-inner{align-items:flex-start;flex-direction:column}}
+
+/* Product cards: concise information and featured products in single full-width rows */
+.product-content{min-width:0;display:flex;flex-direction:column;justify-content:center;padding:12px 14px}
+.product-meta{padding:0!important}.product-meta h3{font-size:13px!important;line-height:1.4!important;min-height:0!important;margin:0!important}
+.product-foot{margin:9px 0 0!important;padding:8px 0 0!important;border-top:1px solid var(--line)!important}
+.product-foot span{font-size:9px!important;color:var(--muted)!important}.product-foot button{font-size:10px!important}
+.product-card.featured-card{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;background:#fff;border:1px solid var(--line);border-radius:13px;overflow:hidden}
+.featured-card .product-photo{aspect-ratio:4/3;min-height:0}.featured-card .product-content{padding:18px 22px}.featured-card .product-meta h3{font-size:clamp(16px,2vw,21px)!important}.featured-card .product-foot{margin-top:12px!important}
+@media(max-width:760px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.product-card.featured-card{grid-column:1/-1;grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.featured-card .product-photo{aspect-ratio:1/1}.featured-card .product-content{padding:12px}.featured-card .product-meta h3{font-size:14px!important}.featured-card .product-foot{align-items:flex-start;flex-direction:column;gap:5px}.featured-card .product-foot button{padding:2px 0}}
 </style>
 </head>
 <body>
@@ -136,7 +145,8 @@ function render(){
  if(!rows.length){grid.innerHTML='<div class="catalog-state">Produk belum tersedia atau tidak ditemukan.</div>';return}
  grid.innerHTML=rows.map(p=>{
   const image=safeImageUrl(p.cover_image)||fallbackImage(p);
-  return '<article class="product-card"><div class="product-photo"><img loading="lazy" src="'+esc(image)+'" alt="'+esc(p.name||'Produk Luki Furniture')+'" onerror="this.onerror=null;this.src=\'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=82\'">'+(p.is_featured?'<span class="product-badge">PRODUK UNGGULAN</span>':'')+'</div><div class="product-meta"><h3>'+esc(p.name||'Produk tanpa nama')+'</h3><p>'+esc(p.short_description||p.description||'Produk Luki Furniture')+'</p></div><div class="product-foot"><span>'+esc(p.material||'Custom made')+'</span><button type="button" data-id="'+esc(p.id)+'">Detail ↗</button></div></article>';
+  const category=p.categories?.name||'Custom furniture';
+  return '<article class="product-card'+(p.is_featured?' featured-card':'')+'"><div class="product-photo"><img loading="lazy" src="'+esc(image)+'" alt="'+esc(p.name||'Produk Luki Furniture')+'" onerror="this.onerror=null;this.src=\'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=82\'">'+(p.is_featured?'<span class="product-badge">PRODUK UNGGULAN</span>':'')+'</div><div class="product-content"><div class="product-meta"><h3>'+esc(p.name||'Produk tanpa nama')+'</h3></div><div class="product-foot"><span>'+esc(category)+'</span><button type="button" data-id="'+esc(p.id)+'">Lihat detail ↗</button></div></div></article>';
  }).join('');
  grid.querySelectorAll('[data-id]').forEach(b=>b.addEventListener('click',()=>{
   const p=products.find(x=>x.id===b.dataset.id);if(!p)return;
