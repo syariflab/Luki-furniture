@@ -7,7 +7,7 @@
 <section id="adminPanel"><div class="panel"><div style="display:flex;justify-content:space-between;gap:12px;align-items:center"><div><h1>Kelola katalog</h1><p class="sub" style="margin:5px 0 0">Atur nama, kategori, foto, dan spesifikasi produk Luki Furniture. Harga layanan ditampilkan terpisah dari katalog produk.</p></div></div></div>
 <div class="panel"><h2 id="formTitle">Tambah produk baru</h2><form id="productForm"><input type="hidden" id="productId"><div class="grid">
 <div class="field"><label>Nama produk *</label><input id="name" required placeholder="Contoh: Sofa Minimalis"></div>
-<div class="field"><label>Kategori *</label><select id="category" required></select></div>
+<div class="field"><label for="category">Kategori produk *</label><select id="category" required><option value="">Memuat kategori...</option></select><small class="hint">Pilih <b>Kitchen Set</b> untuk produk kabinet dapur. Kategori lain digunakan sesuai jenis ruang atau furniture.</small></div>
 <div class="field"><label>Material</label><input id="material" placeholder="Kayu jati, kain, besi..."></div>
 <div class="field"><label>Ukuran / dimensi</label><input id="dimensions" placeholder="P x L x T"></div>
 <div class="field full"><label>Deskripsi singkat</label><input id="short" placeholder="Deskripsi pendek untuk kartu katalog"></div>
@@ -35,7 +35,8 @@ async function loadCategories(){
  if(!db)return;
  const {data,error}=await db.from('categories').select('id,name').eq('is_active',true).order('sort_order');
  if(error){message('formStatus','Gagal memuat kategori: '+error.message);return}
- $('category').innerHTML=(data||[]).map(c=>'<option value="'+esc(c.id)+'">'+esc(c.name)+'</option>').join('');
+ $('category').innerHTML='<option value="">Pilih kategori produk...</option>'+(data||[]).map(c=>'<option value="'+esc(c.id)+'">'+esc(c.name)+'</option>').join('');
+ $('category').disabled=!(data&&data.length);
  if(!data?.length){$('category').innerHTML='<option value="">Kategori belum tersedia</option>';$('category').disabled=true}
 }
 async function loadProducts(){
