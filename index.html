@@ -130,6 +130,7 @@ function render(){
   if(dl.children.length)body.append(dl);
   const dialog=$('productDialog');if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');
  }));
+ observeReveals();
 }
 function safeImageUrl(value){
  if(!value)return '';
