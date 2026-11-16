@@ -169,6 +169,27 @@ body{background:var(--bg);color:var(--ink);padding-bottom:90px;font-family:'Plus
 @media(min-width:761px){.wa-float{right:24px;bottom:24px}.wa-dialog{margin:0 24px 96px 0}}
 @media(max-width:380px){.wa-float{right:14px;bottom:calc(14px + env(safe-area-inset-bottom));width:54px;height:54px}.wa-dialog{margin-right:14px;width:calc(100% - 28px)}}
 @media(prefers-reduced-motion:reduce){.wa-dialog[open]{animation:none}.wa-float{transition:none}}
+
+/* Refined Luki Furniture footer */
+.footer{background:#263b2d;color:#f5f3ec;padding:54px 0 20px}
+.footer-main{display:grid;grid-template-columns:minmax(240px,1.7fr) repeat(3,minmax(120px,1fr));gap:34px;padding-bottom:42px}
+.footer-brand{display:inline-flex;align-items:center;gap:11px;color:#fff}
+.footer-brand-mark{width:42px;height:42px;border-radius:12px;background:#405943;display:grid;place-items:center;color:#e5c4a3}
+.footer-brand-mark .material-symbols-outlined{font-size:25px}
+.footer-brand strong{display:block;font-size:21px;line-height:1;font-weight:800;letter-spacing:1px}
+.footer-brand small{display:block;margin-top:5px;font-size:8px;letter-spacing:1.5px;color:#e5c4a3;font-weight:700}
+.footer-brand-block h2{max-width:310px;margin:25px 0 10px;font-size:25px;line-height:1.2;letter-spacing:-.7px;font-weight:700;color:#fff}
+.footer-brand-block p{max-width:310px;margin:0;color:#c5cbbf;font-size:11px;line-height:1.8}
+.footer-column{display:flex;flex-direction:column;align-items:flex-start;gap:13px;padding-top:5px}
+.footer-column h3{margin:0 0 7px;color:#e5c4a3;font-size:9px;letter-spacing:1.5px;font-weight:800}
+.footer-column>a,.footer-contact>span{color:#d5dbd1;font-size:11px;line-height:1.5;transition:color .2s}
+.footer-column>a:hover{color:#fff}
+.footer-contact>span,.footer-contact>a{display:flex;align-items:flex-start;gap:8px}
+.footer-contact .material-symbols-outlined{font-size:17px;color:#e5c4a3}
+.footer-bottom{border-top:1px solid #52634f;padding-top:17px;display:flex;justify-content:space-between;gap:14px;color:#bdc5b9;font-size:9px;letter-spacing:.2px}
+@media(max-width:760px){.footer{padding:40px 0 18px}.footer-main{grid-template-columns:1fr 1fr;gap:30px 20px;padding-bottom:30px}.footer-brand-block{grid-column:1/-1}.footer-brand-block h2{font-size:23px;margin-top:20px}.footer-column{gap:11px}.footer-bottom{font-size:8px;line-height:1.6}}
+@media(max-width:380px){.footer-main{gap:26px 14px}.footer-column>a,.footer-contact>span{font-size:10px}.footer-bottom{flex-direction:column;gap:6px}}
+
 </style>
 </head>
 <body>
@@ -193,7 +214,19 @@ body{background:var(--bg);color:var(--ink);padding-bottom:90px;font-family:'Plus
 </main>
 <button class="wa-float" id="openWaPopup" type="button" aria-label="Buka konsultasi WhatsApp"><span class="material-symbols-outlined">chat</span></button>
 <dialog class="wa-dialog" id="waDialog" aria-labelledby="waTitle"><div class="wa-popup-head"><span class="wa-popup-icon"><span class="material-symbols-outlined">forum</span></span><button class="wa-popup-close" id="closeWaPopup" type="button" aria-label="Tutup popup">×</button></div><div class="wa-popup-content"><span class="wa-eyebrow">LUKI FURNITURE</span><h2 id="waTitle">Ada yang ingin dikonsultasikan?</h2><p>Ceritakan kebutuhan kitchen set atau furniture custom Anda. Kami siap membantu.</p><a class="wa-popup-action" href="https://wa.me/6289618527700?text=Halo%20Luki%20Furniture%2C%20saya%20ingin%20konsultasi%20custom%20furniture." target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined">chat</span>Mulai konsultasi WhatsApp</a></div></dialog><dialog class="product-dialog" id="productDialog" aria-labelledby="dialogTitle"><div class="dialog-head"><h2 id="dialogTitle">Detail produk</h2><button class="dialog-close" id="dialogClose" type="button" aria-label="Tutup detail">×</button></div><div class="dialog-body" id="dialogBody"></div></dialog>
-<footer class="footer"><div class="wrap"><div class="footer-top"><div><a class="brand" href="#">LUKI<small>FURNITURE CUSTOM</small></a><p>Kitchen set dan interior custom sesuai kebutuhan ruang Anda.</p></div><div class="footer-links"><a href="#kategori">Kategori</a><a href="#katalog">Katalog</a><a href="#harga" class="price-trigger">Daftar harga</a><a href="#kontak">Kontak</a></div></div><div class="footer-bottom"><span>© <span id="year"></span> Luki Furniture</span><span>Kitchen Set & Interior Custom</span></div></div></footer>
+<footer class="footer"><div class="wrap">
+<div class="footer-main">
+<div class="footer-brand-block">
+<a class="footer-brand" href="#beranda" aria-label="Luki Furniture - Beranda"><span class="footer-brand-mark"><span class="material-symbols-outlined">chair</span></span><span><strong>LUKI</strong><small>FURNITURE CUSTOM</small></span></a>
+<h2>Ruang nyaman, dirancang sesuai kebutuhan.</h2>
+<p>Solusi kitchen set, furniture, dan interior custom untuk ruang yang lebih fungsional dan personal.</p>
+</div>
+<div class="footer-column"><h3>NAVIGASI</h3><a href="#beranda">Beranda</a><a href="#kategori">Kategori</a><a href="#katalog">Katalog</a><a href="#harga" class="price-trigger">Daftar harga</a></div>
+<div class="footer-column"><h3>LAYANAN</h3><a href="#kategori">Kitchen Set</a><a href="#kategori">Interior Custom</a><a href="#kategori">Furniture Custom</a><a href="#kontak">Konsultasi</a></div>
+<div class="footer-column footer-contact"><h3>HUBUNGI KAMI</h3><span><span class="material-symbols-outlined">location_on</span>Karawang, Jawa Barat</span><a href="https://wa.me/6289618527700?text=Halo%20Luki%20Furniture%2C%20saya%20ingin%20konsultasi%20custom%20furniture." target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined">chat</span>WhatsApp Luki Furniture</a></div>
+</div>
+<div class="footer-bottom"><span>© <span id="year"></span> Luki Furniture. Hak cipta dilindungi.</span><span>KITCHEN SET &amp; INTERIOR CUSTOM</span></div>
+</div></footer>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
 // Reveal sections and cards only when they approach the viewport.
