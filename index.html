@@ -333,6 +333,12 @@ body{font-family:"DM Sans",sans-serif;background:var(--bg);color:var(--ink)}
 .category-tab.active,.product-badge{background:#fff0d0;color:#75440d}
 .footer{background:#191817}
 @media(max-width:620px){.brand-logo{width:42px;height:48px}.brand-copy small{font-size:16px}}
+
+/* Product popup consultation action */
+.dialog-consult{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;min-height:48px;margin-top:20px;padding:12px 18px;border-radius:10px;background:#e99b19;color:#191817;font:700 12px "DM Sans",sans-serif;text-decoration:none;transition:background .2s,transform .2s}
+.dialog-consult:hover{background:#ffd36c;transform:translateY(-1px)}
+.dialog-consult .material-symbols-outlined{font-size:19px}
+@media(max-width:640px){.dialog-consult{min-height:50px;margin-top:18px}}
 </style>
 </head>
 <body>
@@ -437,6 +443,13 @@ function render(){
   const dl=document.createElement('dl');
   details.filter(x=>x[1]).forEach(([label,value])=>{const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=value;dl.append(dt,dd)});
   if(dl.children.length)body.append(dl);
+  const consult=document.createElement('a');
+  consult.className='dialog-consult';
+  consult.href='https://wa.me/6289618527700?text='+encodeURIComponent('Halo Luki Furniture, saya ingin konsultasi mengenai produk '+(p.name||'yang ditampilkan')+'. Mohon informasi lebih lanjut.');
+  consult.target='_blank';
+  consult.rel='noopener noreferrer';
+  consult.innerHTML='<span class="material-symbols-outlined" aria-hidden="true">chat</span>Konsultasi produk ini via WhatsApp';
+  body.append(consult);
   const dialog=$('productDialog');if(typeof dialog.showModal==='function')dialog.showModal();else dialog.setAttribute('open','');
   startGalleryAuto(track);
  }));
