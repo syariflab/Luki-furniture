@@ -194,6 +194,73 @@ body{background:var(--bg);color:var(--ink);padding-bottom:0;font-family:'Plus Ja
 html,body,a,button,input,select,textarea,[role="button"]{-webkit-tap-highlight-color:transparent}
 button,a,[role="button"]{touch-action:manipulation}
 button:active,a:active,[role="button"]:active{ -webkit-tap-highlight-color:transparent }
+
+/* Product popup refinement: prioritize a clear, uncropped product photo */
+.product-dialog{
+  width:min(960px,calc(100% - 36px));
+  max-width:960px;
+  max-height:92dvh;
+  border-radius:22px;
+}
+.dialog-body{
+  grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);
+  gap:0 30px;
+  padding:22px;
+}
+.dialog-image{
+  width:100%;
+  height:clamp(420px,68dvh,700px);
+  max-height:none;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+  padding:10px;
+  background:#f0eee8;
+  border:1px solid #e8e3da;
+  border-radius:14px;
+}
+.dialog-body p{
+  margin:3px 0 22px;
+  color:#625d55;
+  font-size:13px;
+  line-height:1.85;
+}
+.dialog-body dl{align-content:start}
+.dialog-body dt{font-size:10px}
+.dialog-body dd{font-size:13px}
+@media(max-width:640px){
+  .product-dialog{
+    width:calc(100% - 14px);
+    max-height:94dvh;
+    border-radius:18px;
+  }
+  .dialog-head{min-height:60px;padding:12px 15px}
+  .dialog-body{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    padding:12px 12px 20px;
+  }
+  .dialog-image{
+    width:100%;
+    height:clamp(260px,48dvh,500px);
+    max-height:none;
+    aspect-ratio:auto;
+    object-fit:contain;
+    padding:8px;
+    margin:0 0 17px;
+    border-radius:12px;
+  }
+  .dialog-body p{margin:0 2px 16px;font-size:12px;line-height:1.8}
+  .dialog-body dl{width:100%;grid-template-columns:1fr 1fr;column-gap:16px}
+  .dialog-body dt{padding:12px 0 5px;font-size:9px}
+  .dialog-body dd{padding:0 0 12px;font-size:12px}
+}
+@media(max-width:360px){
+  .dialog-image{height:42dvh}
+  .dialog-body dl{grid-template-columns:1fr}
+}
+
 </style>
 </head>
 <body>
@@ -280,7 +347,7 @@ function render(){
   const p=products.find(x=>x.id===b.dataset.id);if(!p)return;
   $('dialogTitle').textContent=p.name||'Detail produk';
   const body=$('dialogBody');body.replaceChildren();
-  const detailImage=document.createElement('img');detailImage.className='dialog-image';detailImage.alt=p.name||'Foto produk Luki Furniture';detailImage.src=safeImageUrl(p.cover_image)||fallbackImage(p);detailImage.loading='lazy';detailImage.onerror=()=>{detailImage.onerror=null;detailImage.src=fallbackImage(p)};body.append(detailImage);
+  const detailImage=document.createElement('img');detailImage.className='dialog-image';detailImage.alt=p.name||'Foto produk Luki Furniture';detailImage.src=safeImageUrl(p.cover_image)||fallbackImage(p);detailImage.loading='eager';detailImage.decoding='async';detailImage.onerror=()=>{detailImage.onerror=null;detailImage.src=fallbackImage(p)};body.append(detailImage);
   const description=document.createElement('p');description.textContent=p.description||p.short_description||'Informasi produk dapat dikonsultasikan dengan Luki Furniture.';body.append(description);
   const details=[['Kategori',p.categories?.name],['Material',p.material],['Ukuran',p.dimensions]];
   const dl=document.createElement('dl');
