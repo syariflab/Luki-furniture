@@ -190,6 +190,10 @@ body{background:var(--bg);color:var(--ink);padding-bottom:0;font-family:'Plus Ja
 @media(max-width:760px){.footer{padding:40px 0 18px}.footer-main{grid-template-columns:1fr 1fr;gap:30px 20px;padding-bottom:30px}.footer-brand-block{grid-column:1/-1}.footer-brand-block h2{font-size:23px;margin-top:20px}.footer-column{gap:11px}.footer-bottom{font-size:8px;line-height:1.6}}
 @media(max-width:380px){.footer-main{gap:26px 14px}.footer-column>a,.footer-contact>span{font-size:10px}.footer-bottom{flex-direction:column;gap:6px}}
 
+/* Remove the default blue tap flash on Android/mobile browsers */
+html,body,a,button,input,select,textarea,[role="button"]{-webkit-tap-highlight-color:transparent}
+button,a,[role="button"]{touch-action:manipulation}
+button:active,a:active,[role="button"]:active{ -webkit-tap-highlight-color:transparent }
 </style>
 </head>
 <body>
